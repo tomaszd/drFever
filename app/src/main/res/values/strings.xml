@@ -3,4 +3,5 @@
     <string name="title_home">Home Temperature</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="HintAmount">How much drug</string>
 </resources>
