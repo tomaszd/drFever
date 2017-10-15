@@ -1,5 +1,6 @@
 package com.example.tomaszd.drfever;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -117,9 +118,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Check Amotaks",
                         Toast.LENGTH_LONG).show();
-            }
-        });
 
+                Intent myIntent = new Intent(MainActivity.this, AmotaksActivity.class);
+                MainActivity.this.startActivity(myIntent);
+            }
+
+
+        });
 
 
     }

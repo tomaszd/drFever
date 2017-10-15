@@ -14,4 +14,12 @@
         android:textSize="30sp"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="103dp" />
+
+    <Button
+        android:id="@+id/buttonCheckParacetamol"
+        android:layout_width="156dp"
+        android:layout_height="62dp"
+        android:text="Check Paracetamol "
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="366dp" />
 </android.support.constraint.ConstraintLayout>
