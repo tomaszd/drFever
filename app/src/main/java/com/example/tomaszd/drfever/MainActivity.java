@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,8 +15,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
-    private int actualAge=0;
-    private int actualWeight=0;
+    private int actualAge = 0;
+    private int actualWeight = 0;
+    private String amountOfDrugs = "";
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -43,14 +45,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final EditText textCounted = (EditText) findViewById(R.id.editTextCounted);
+
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        SeekBar seekBarAge = (SeekBar)findViewById(R.id.seekBarAge);
-        final TextView seekBarValue = (TextView)findViewById(R.id.textViewAge);
+        SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
+        final TextView seekBarValue = (TextView) findViewById(R.id.textViewAge);
 
-        seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+        seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
@@ -59,20 +63,22 @@ public class MainActivity extends AppCompatActivity {
                 actualAge = progress / 10;
                 seekBarValue.setText(String.valueOf(actualAge));
             }
+
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
             }
+
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
             }
         });
 
-        SeekBar seekBarWeight = (SeekBar)findViewById(R.id.seekBarWeight);
-        final TextView seekBarWeightValue = (TextView)findViewById(R.id.textViewWeight);
+        SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeight);
+        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeight);
 
-        seekBarWeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+        seekBarWeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
@@ -81,22 +87,27 @@ public class MainActivity extends AppCompatActivity {
                 actualWeight = progress / 5;
                 seekBarWeightValue.setText(String.valueOf(actualWeight));
             }
+
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
             }
+
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
             }
         });
 
-        Button button= (Button)findViewById(R.id.buttonCount);
-        button.setOnClickListener(new View.OnClickListener(){
+
+        Button button = (Button) findViewById(R.id.buttonCount);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "This is my Toast message!Counting in Progress...",
+                Toast.makeText(MainActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
+                amountOfDrugs = "Please give to the kid: " + String.valueOf((actualAge * actualWeight) / 10);
+                textCounted.setText(amountOfDrugs);
             }
         });
 

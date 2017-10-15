@@ -68,10 +68,6 @@
         android:id="@+id/buttonCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="60dp"
         android:background="@android:color/holo_green_light"
         android:elevation="0dp"
         android:fontFamily="sans-serif"
@@ -80,7 +76,11 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:typeface="serif"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:layout_below="@+id/editTextCounted"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -106,20 +106,20 @@
         android:layout_alignStart="@+id/seekBarWeight" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextCounted"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/navigation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
         android:ems="12"
         android:hint="@string/HintAmount"
         android:inputType="textPersonName"
-        android:text="Amount"
+        android:text="Amount of drugs for the kid"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/seekBarAge"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textViewAge"
