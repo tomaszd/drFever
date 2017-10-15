@@ -13,26 +13,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Age of Child"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/seekBarAge"
-        android:layout_alignStart="@+id/seekBarAge" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/seekBarWeight"
+        android:layout_alignLeft="@+id/seekBarWeight"
+        android:layout_alignStart="@+id/seekBarWeight" />
 
     <SeekBar
         android:id="@+id/seekBarWeight"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
         android:layout_above="@+id/textViewAge"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp" />
+        android:layout_centerHorizontal="true" />
 
     <SeekBar
         android:id="@+id/seekBarAge"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/seekBarWeight"
-        android:layout_alignStart="@+id/seekBarWeight"
-        android:layout_marginTop="16dp" />
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginBottom="20dp"/>
 
     <FrameLayout
         android:id="@+id/content"
@@ -68,19 +70,17 @@
         android:id="@+id/buttonCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:background="@android:color/holo_green_light"
-        android:elevation="0dp"
-        android:fontFamily="sans-serif"
         android:text="Count"
-        android:textAlignment="center"
-        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:typeface="serif"
         android:visibility="visible"
         android:layout_below="@+id/editTextCounted"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="21dp" />
+        android:layout_alignParentStart="true" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -97,13 +97,15 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:text="Weight of Child in kilos"
-        android:layout_marginBottom="21dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         android:layout_above="@+id/seekBarWeight"
         android:layout_alignLeft="@+id/seekBarWeight"
-        android:layout_alignStart="@+id/seekBarWeight" />
+        android:layout_alignStart="@+id/seekBarWeight"
+        android:layout_marginBottom="10dp"
+        android:text="Weight in kg"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextCounted"
@@ -116,27 +118,33 @@
         android:text="Amount of drugs for the kid"
         android:textAlignment="center"
         android:textAllCaps="true"
+        android:textSize="20sp"
         android:textStyle="bold|italic"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/seekBarAge"
+        android:layout_below="@+id/textViewAge"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textViewAge"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="Age"
-        android:layout_centerVertical="true"
+        android:layout_alignBottom="@+id/seekBarAge"
+        android:layout_alignEnd="@+id/seekBarAge"
         android:layout_alignRight="@+id/seekBarAge"
-        android:layout_alignEnd="@+id/seekBarAge" />
+        android:text="Age"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewWeight"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_alignBottom="@+id/seekBarWeight"
-        android:layout_alignRight="@+id/seekBarWeight"
+        android:layout_above="@+id/seekBarWeight"
         android:layout_alignEnd="@+id/seekBarWeight"
-        android:text="Weight" />
+        android:layout_alignRight="@+id/seekBarWeight"
+        android:text="Weight"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
