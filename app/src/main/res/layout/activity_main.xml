@@ -12,28 +12,27 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
         android:text="Age of Child"
-        android:layout_alignBottom="@+id/seekBar"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/seekBarAge"
+        android:layout_alignStart="@+id/seekBarAge" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seekBarWeight"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView"
+        android:layout_above="@+id/textViewAge"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp" />
+        android:layout_marginBottom="13dp" />
 
     <SeekBar
-        android:id="@+id/seekBar3"
+        android:id="@+id/seekBarAge"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button"
-        android:layout_alignLeft="@+id/seekBar"
-        android:layout_alignStart="@+id/seekBar"
-        android:layout_marginBottom="25dp" />
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/seekBarWeight"
+        android:layout_alignStart="@+id/seekBarWeight"
+        android:layout_marginTop="16dp" />
 
     <FrameLayout
         android:id="@+id/content"
@@ -45,6 +44,15 @@
 
 
         <TextView
+            android:id="@+id/message2"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="\nCheck amount of drugs" />
+
+        <TextView
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="108dp"
@@ -54,33 +62,25 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/title_home" />
 
-        <TextView
-            android:id="@+id/message2"
-            android:layout_width="match_parent"
-            android:layout_height="78dp"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="\nCheck amount of drugs" />
-
     </FrameLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
         android:background="@android:color/holo_green_light"
+        android:elevation="0dp"
         android:fontFamily="sans-serif"
         android:text="Count"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
         android:typeface="serif"
-        android:visibility="visible"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="60dp" />
+        android:visibility="visible" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -100,41 +100,43 @@
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:text="Weight of Child in kilos"
-        android:layout_above="@+id/seekBar3"
-        android:layout_alignLeft="@+id/seekBar3"
-        android:layout_alignStart="@+id/seekBar3"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/seekBarWeight"
+        android:layout_alignLeft="@+id/seekBarWeight"
+        android:layout_alignStart="@+id/seekBarWeight" />
 
     <EditText
         android:id="@+id/editText"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/navigation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:ems="12"
         android:hint="@string/HintAmount"
         android:inputType="textPersonName"
         android:text="Amount"
-        android:layout_marginBottom="20dp"
-        android:layout_above="@+id/navigation"
-        android:layout_centerHorizontal="true" />
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold|italic" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="weight"
-        android:layout_below="@+id/seekBar"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:id="@+id/textViewAge"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:text="Age"
-        android:layout_alignBottom="@+id/seekBar"
-        android:layout_alignRight="@+id/seekBar"
-        android:layout_alignEnd="@+id/seekBar"
-        android:layout_marginBottom="17dp" />
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/seekBarAge"
+        android:layout_alignEnd="@+id/seekBarAge" />
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/seekBarWeight"
+        android:layout_alignRight="@+id/seekBarWeight"
+        android:layout_alignEnd="@+id/seekBarWeight"
+        android:text="Weight" />
 
 </RelativeLayout>
