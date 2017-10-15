@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                actualAge = progress / 10;
-                seekBarValue.setText(String.valueOf(actualAge));
+                actualAge = (progress * 10) / 100;
+                seekBarValue.setText(String.valueOf(actualAge) + " years");
             }
 
             @Override
@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                actualWeight = progress / 5;
-                seekBarWeightValue.setText(String.valueOf(actualWeight));
+                actualWeight = (progress * 10) / 50;
+                seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
             }
 
             @Override
