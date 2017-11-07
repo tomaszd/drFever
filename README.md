@@ -1,14 +1,14 @@
 # drFever
-1. Idea is to have an android app that will help with counting how much of antibiotic should be used 
+1. Android App that will help you  with counting how much of antibiotic should be used 
 
 
 The basic function would be to select: 
-1. the age 
+1. The age 
 1. the weight of the Child 
 
-**and count amount of needed drugs.**
+**And then count amount of needed drugs.**
 
-Differenct medicaments should be possible to be seelcted e.g.:
+Few different medicaments should be possible to be selected e.g.:
 
 1. Amotax
 1. Klacid
