@@ -32,7 +32,7 @@ public class AmotaksActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(AmotaksActivity.this, "Lets Check Paracetamol",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(AmotaksActivity.this, MainActivity.class);
+                Intent myIntent = new Intent(AmotaksActivity.this, ParacetamolActivity.class);
                 AmotaksActivity.this.startActivity(myIntent);
             }
         });
