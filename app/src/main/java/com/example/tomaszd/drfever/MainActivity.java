@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
-        final TextView seekBarValue = (TextView) findViewById(R.id.textViewAge);
+        final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeParacetamol);
 
         seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeight);
-        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeight);
+        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeightParacetamol);
 
         seekBarWeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
