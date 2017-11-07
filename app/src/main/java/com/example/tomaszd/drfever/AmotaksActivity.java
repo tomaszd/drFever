@@ -15,8 +15,8 @@ public class AmotaksActivity extends AppCompatActivity {
         setContentView(R.layout.amotaks_main);
 
 
-        Button button = (Button) findViewById(R.id.buttonCheckParacetamol);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button buttonCheckParacetamol = (Button) findViewById(R.id.buttonCheckParacetamol);
+        buttonCheckParacetamol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(AmotaksActivity.this, "Lets check Paracetamol",
@@ -25,5 +25,30 @@ public class AmotaksActivity extends AppCompatActivity {
                 AmotaksActivity.this.startActivity(myIntent);
             }
         });
+
+        Button buttonParacetamol = (Button) findViewById(R.id.buttonParacetamol);
+        buttonParacetamol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AmotaksActivity.this, "Lets Check Paracetamol",
+                        Toast.LENGTH_LONG).show();
+                Intent myIntent = new Intent(AmotaksActivity.this, MainActivity.class);
+                AmotaksActivity.this.startActivity(myIntent);
+            }
+        });
+
+        Button buttonAmotaks = (Button) findViewById(R.id.buttonAmotaks);
+        buttonAmotaks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AmotaksActivity.this, "Lets Count Amotaks",
+                        Toast.LENGTH_LONG).show();
+                //Intent myIntent = new Intent(AmotaksActivity.this, MainActivity.class);
+                //AmotaksActivity.this.startActivity(myIntent);
+            }
+        });
+
+
     }
 }
+//@+id/buttonParacetamol
