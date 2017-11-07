@@ -12,18 +12,18 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LetsCheck Amotaks"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="103dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp" />
+        android:layout_marginTop="63dp"
+        android:text="      Check Amotaks     "
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="103dp" />
 
     <Button
         android:id="@+id/buttonCheckParacetamol"
-        android:background="@drawable/button_bg"
-        android:backgroundTint="@android:color/holo_orange_dark"
         android:layout_width="156dp"
         android:layout_height="62dp"
         android:layout_alignParentBottom="true"
@@ -32,6 +32,8 @@
         android:layout_marginBottom="38dp"
         android:layout_marginLeft="21dp"
         android:layout_marginStart="21dp"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="@android:color/holo_orange_dark"
         android:text="Check Paracetamol "
         android:textAllCaps="false"
         tools:layout_editor_absoluteX="41dp"
@@ -53,32 +55,34 @@
         android:id="@+id/buttonParacetamol"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="100dp"
-        android:layout_height="120dp"
-        android:background="@drawable/button_bg"
+        android:layout_height="180dp"
+        android:layout_alignEnd="@+id/buttonCheckParacetamol"
+        android:layout_alignLeft="@+id/relativeLayout"
         android:layout_alignParentTop="false"
+        android:layout_alignRight="@+id/buttonCheckParacetamol"
+        android:layout_alignStart="@+id/relativeLayout"
         android:layout_alignTop="@+id/relativeLayout"
         android:layout_marginTop="64dp"
+        android:background="@drawable/button_bg"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:elevation="0dp"
         android:text="Paracetamol"
-        android:visibility="visible"
-        android:layout_alignLeft="@+id/relativeLayout"
-        android:layout_alignStart="@+id/relativeLayout"
-        android:layout_alignRight="@+id/buttonCheckParacetamol"
-        android:layout_alignEnd="@+id/buttonCheckParacetamol" />
+        android:textStyle="bold"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/buttonAmotaks"
-        android:background="@drawable/button_bg"
         android:layout_width="100dp"
         android:layout_height="120dp"
         android:layout_alignBottom="@+id/buttonParacetamol"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignRight="@+id/textView3"
         android:layout_alignTop="@+id/buttonParacetamol"
+        android:background="@drawable/button_bg"
+
+
         android:backgroundTint="@android:color/holo_green_light"
         android:text="Amotaks"
-
-
-        android:layout_alignRight="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3" />
+        android:textStyle="bold" />
 
 </RelativeLayout>
