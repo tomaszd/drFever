@@ -73,12 +73,31 @@ public class ParacetamolActivity extends AppCompatActivity {
 
 
         Button button = (Button) findViewById(R.id.buttonCount);
+
+
+        /**
+         * Dawkowanie:
+
+         Doustnie. Dorośli: 1-2 tabletki 2-4 razy na dobę, nie częściej niż co 4 godziny
+         (maksymalna dawka dobowa w leczeniu doraźnym wynosi 4 g, w leczeniu długotrwałym 2,6 g).
+         Dzieci: dawkę leku ustala się w zależności od wieku i masy ciała dziecka, zazwyczaj
+         10-15 mg/kg masy ciała. Dzieci 7-12 rok życia: 1/2 tabletki co 6-8 godzin.
+         Należy zasięgnąć opinii lekarza jeśli ból utrzymuje się dłużej niż 10 dni,
+         a gorączka dłużej niż 3 dni.   W czasie stosowania leku nie należy pić alkoholu.
+         Zapoznaj się z właściwościami leku opisanymi w ulotce przed jego zastosowaniem.
+         Przed zastosowaniem leku należy sprawdzić datę ważności podaną na opakowaniu (etykiecie).
+         Nie należy stosować leku po terminie ważności. Przechowuj lek w szczelnie zamkniętym
+         opakowaniu, w miejscu niedostępnym i niewidocznym dla dzieci, zgodnie z wymogami producenta.
+         */
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
-                amountOfDrugs = "Please give to the kid: " + String.valueOf((actualAge * actualWeight) / 10);
+                amountOfDrugs = "Give to the kid: " + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg/kg";
+                String total = "10-15 mg/kg";
+
                 textCounted.setText(amountOfDrugs);
             }
         });
