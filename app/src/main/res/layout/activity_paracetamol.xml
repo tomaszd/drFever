@@ -41,17 +41,17 @@
         android:id="@+id/buttonCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextCounted"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="@string/count_paracetamol"
         android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:layout_above="@+id/buttonCheckAmotaks"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp" />
 
 
     <TextView
@@ -71,17 +71,18 @@
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/seekBarAge"
+        android:layout_alignLeft="@+id/seekBarAge"
+        android:layout_alignRight="@+id/seekBarAge"
+        android:layout_alignStart="@+id/seekBarAge"
         android:layout_below="@+id/textViewAgeParacetamol"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
         android:ems="12"
         android:hint="@string/HintAmount"
-        android:inputType="textPersonName"
+        android:inputType="text|textMultiLine"
         android:text="@string/amount_of_drugs_for_the_kid"
         android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold|italic" />
 
     <TextView

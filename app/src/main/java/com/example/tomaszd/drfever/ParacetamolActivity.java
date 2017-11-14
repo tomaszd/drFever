@@ -32,7 +32,7 @@ public class ParacetamolActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                actualAge = (progress * 10) / 100;
+                actualAge = (progress * 20) / 100;
                 seekBarValue.setText(String.valueOf(actualAge) + " years");
             }
 
@@ -93,10 +93,18 @@ public class ParacetamolActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String sevenTill12amount = " 1/2 pills every 6-8 hour";
+                String adultParacetamolAmount = " 1-2 pills 2-4 times a day , not often than 4 hours";
                 Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
-                amountOfDrugs = "Give to the kid: " + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg/kg";
-                String total = "10-15 mg/kg";
+                if (actualAge < 7) {
+                    amountOfDrugs = "Give to the kid:\n" + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg/kg";
+                } else if (actualAge >= 7 && actualAge <= 12) {
+                    amountOfDrugs = "To the 7-12 Age kid give:\n" + sevenTill12amount;
+
+                } else if (actualAge > 12) {
+                    amountOfDrugs = "Give to older kids/Adults:\n" + adultParacetamolAmount;
+                }
 
                 textCounted.setText(amountOfDrugs);
             }
