@@ -98,7 +98,8 @@ public class ParacetamolActivity extends AppCompatActivity {
                 Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
                 if (actualAge < 7) {
-                    amountOfDrugs = "Give to the kid:\n" + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg";
+                    amountOfDrugs = "To the 0-6 years kid give:\n" + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg\n" +
+                            "every 4-6 hour";
                 } else if (actualAge >= 7 && actualAge <= 12) {
                     amountOfDrugs = "To the 7-12 Age kid give:\n" + amountParacetamol7_12;
 
