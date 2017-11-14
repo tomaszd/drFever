@@ -93,17 +93,17 @@ public class ParacetamolActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String sevenTill12amount = " 1/2 pills every 6-8 hour";
-                String adultParacetamolAmount = " 1-2 pills 2-4 times a day , not often than 4 hours";
+                String amountParacetamol7_12 = getResources().getString(R.string.amountParacetamol7_12);
+                String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
                 Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
                 if (actualAge < 7) {
-                    amountOfDrugs = "Give to the kid:\n" + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg/kg";
+                    amountOfDrugs = "Give to the kid:\n" + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg";
                 } else if (actualAge >= 7 && actualAge <= 12) {
-                    amountOfDrugs = "To the 7-12 Age kid give:\n" + sevenTill12amount;
+                    amountOfDrugs = "To the 7-12 Age kid give:\n" + amountParacetamol7_12;
 
                 } else if (actualAge > 12) {
-                    amountOfDrugs = "Give to older kids/Adults:\n" + adultParacetamolAmount;
+                    amountOfDrugs = "Give to older kids/Adults:\n" + amountParacetamolAdult;
                 }
 
                 textCounted.setText(amountOfDrugs);
