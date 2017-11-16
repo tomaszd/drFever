@@ -79,8 +79,6 @@
         android:layout_alignRight="@+id/textView3"
         android:layout_alignTop="@+id/buttonParacetamol"
         android:background="@drawable/button_bg"
-
-
         android:backgroundTint="@android:color/holo_green_light"
         android:text="Amotaks"
         android:textStyle="bold" />

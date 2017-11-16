@@ -6,6 +6,17 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add data for new user"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_margin="10dp"
+        android:layout_padding="10dp"/>
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
@@ -59,6 +70,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_padding="10dp"
         android:layout_weight="1"
         android:gravity="top"
         android:hint="Additional info" />
@@ -70,6 +83,11 @@
         android:layout_gravity="left"
         android:text="Save User Data"
         android:textAllCaps="false"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:background="@drawable/button_bg"
+        android:layout_margin="10dp"
+        android:layout_padding="10dp"
+        />
 
 </LinearLayout>
