@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AmotaksActivity" />
-        <activity android:name=".ParacetamolActivity"></activity>
+        <activity android:name=".ParacetamolActivity" />
+        <activity android:name=".AddNewUserActivity"></activity>
     </application>
 
 </manifest>
