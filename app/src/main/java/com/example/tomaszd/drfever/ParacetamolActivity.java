@@ -117,7 +117,6 @@ public class ParacetamolActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(ParacetamolActivity.this, "Check Amotaks",
                         Toast.LENGTH_LONG).show();
-
                 Intent myIntent = new Intent(ParacetamolActivity.this, AmotaksActivity.class);
                 ParacetamolActivity.this.startActivity(myIntent);
             }
@@ -125,6 +124,18 @@ public class ParacetamolActivity extends AppCompatActivity {
 
         });
 
+        Button buttonAddNewUser = (Button) findViewById(R.id.addNewUser);
+        buttonAddNewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ParacetamolActivity.this, "Please Add New User Data",
+                        Toast.LENGTH_LONG).show();
+                Intent myIntent = new Intent(ParacetamolActivity.this, AddNewUserActivity.class);
+                ParacetamolActivity.this.startActivity(myIntent);
+            }
+
+
+        });
 
     }
 }

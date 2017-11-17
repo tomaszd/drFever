@@ -111,15 +111,16 @@
         android:id="@+id/buttonCheckAmotaks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="34dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@android:color/holo_green_light"
         android:text="  Check Amotaks  "
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
@@ -132,5 +133,18 @@
         android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/addNewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextCounted"
+        android:layout_alignStart="@+id/editTextCounted"
+        android:layout_below="@+id/buttonCount"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="     Add New User      "
+        android:textAllCaps="false"
+        android:textSize="18sp" />
 
 </RelativeLayout>
