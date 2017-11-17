@@ -23,17 +23,18 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:hint="Name"
+        android:hint="Enter Name"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <EditText
+    <TextView
+        android:id="@+id/textSelectAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:hint="Select age in years"
         android:padding="10dp"
-        android:hint="Age"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -48,12 +49,13 @@
         android:max="20"
         android:progress="5" />
 
-    <EditText
+    <TextView
+        android:id="@+id/textSelectWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:hint="Weight"
+        android:hint="Select weight in kg"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
