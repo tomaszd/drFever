@@ -97,6 +97,10 @@ public class ParacetamolActivity extends AppCompatActivity {
                 String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
                 Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
+                if (actualWeight == 0 || actualAge == 0) {
+                    textCounted.setText("Please select Age and Weight of the patient");
+                    return;
+                }
                 if (actualAge < 7) {
                     amountOfDrugs = "To the 0-6 years kid give:\n" + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg\n" +
                             "every 4-6 hour";
