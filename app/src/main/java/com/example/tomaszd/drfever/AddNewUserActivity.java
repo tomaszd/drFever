@@ -104,7 +104,6 @@ public class AddNewUserActivity extends AppCompatActivity {
             return;
         }
 
-
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("name", name);

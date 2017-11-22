@@ -146,5 +146,20 @@
         android:text="     Add New User      "
         android:textAllCaps="false"
         android:textSize="18sp" />
+    <Button
+        android:id="@+id/loadUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextCounted"
+        android:layout_alignStart="@+id/editTextCounted"
+        android:layout_below="@+id/addNewUser"
+        android:background="@drawable/button_bg"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="        Load User       "
+        android:textAllCaps="false"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="14dp"
+        android:textSize="18sp" />
+
 
 </RelativeLayout>

@@ -1,7 +1,9 @@
 package com.example.tomaszd.drfever;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -136,6 +138,31 @@ public class ParacetamolActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(ParacetamolActivity.this, AddNewUserActivity.class);
                 ParacetamolActivity.this.startActivity(myIntent);
+            }
+
+
+        });
+
+        Button buttonLoadData = (Button) findViewById(R.id.loadUser);
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+
+        buttonLoadData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String actualName = preferences.getString("name", "");
+                actualAge = preferences.getInt("age", 0);
+                actualWeight = preferences.getInt("weight", 0);
+                Toast.makeText(ParacetamolActivity.this, "Data For user Loaded\n"
+                                + "Name: " + actualName + "\n"
+                                + "Age: " + String.valueOf(actualAge) + "\n"
+                                + "Name: " + String.valueOf(actualWeight) + "\n",
+
+                        Toast.LENGTH_LONG).show();
+                seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
+                seekBarValue.setText(String.valueOf(actualAge) + " years");
+
+
             }
 
 
