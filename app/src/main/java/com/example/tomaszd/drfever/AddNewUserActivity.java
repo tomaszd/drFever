@@ -1,30 +1,31 @@
 package com.example.tomaszd.drfever;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.app.PendingIntent.getActivity;
+
 public class AddNewUserActivity extends AppCompatActivity {
+    int actualWeight = 0;
+    int actualAge = 0;
+    String actualName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_user);
 
-        Button buttonSaveUserData = (Button) findViewById(R.id.buttonSaveUserData);
-        buttonSaveUserData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(AddNewUserActivity.this, "Data for user Saved",
-                        Toast.LENGTH_LONG).show();
-                //TODO Save Data!!!!
-            }
-        });
-
+        final EditText actualName = (EditText) findViewById(R.id.editEnterName);
         Button buttonCancel = (Button) findViewById(R.id.buttonCancel);
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,13 +42,15 @@ public class AddNewUserActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                int actualAge = (progress* 10) / 10 ;
+                actualAge = (progress * 10) / 10;
                 textSelectAge.setText(String.valueOf(actualAge + " years"));
             }
+
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
             }
+
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
@@ -62,13 +65,15 @@ public class AddNewUserActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                int actualWeight = (progress * 10) / 10 ;
+                actualWeight = (progress * 10) / 10;
                 textSelectWeight.setText(String.valueOf(actualWeight + " kg"));
             }
+
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
             }
+
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 // TODO Auto-generated method stub
@@ -76,7 +81,44 @@ public class AddNewUserActivity extends AppCompatActivity {
         });
 
 
+        Button buttonSaveUserData = (Button) findViewById(R.id.buttonSaveUserData);
+        buttonSaveUserData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //String actualNameValue = ;
+                saveUserData(actualName.getText().toString(), actualAge, actualWeight);
+            }
+        });
+
     }
 
+    /**
+     * Function to save user data to the sharedPreferences
+     */
+    private void saveUserData(String name, int age, int weight) {
+
+        if (name.equals("") || age == 0 || weight == 0) {
+            Toast.makeText(AddNewUserActivity.this,
+                    "Please add proper name, age, weight",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
+
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("name", name);
+        editor.putInt("age", age);
+        editor.putInt("weight", weight);
+        editor.apply();
+
+        Toast.makeText(AddNewUserActivity.this,
+                "Data for user Saved: \n"
+                        + "Name: " + name + "\n"
+                        + "Age: " + String.valueOf(age) + "\n"
+                        + "Weight: " + String.valueOf(weight),
+
+                Toast.LENGTH_LONG).show();
+    }
 
 }
