@@ -100,7 +100,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
                 if (actualWeight == 0 || actualAge == 0) {
-                    textCounted.setText("Please select Age and Weight of the patient");
+                    textCounted.setText(R.string.select_age_and_weight);
                     return;
                 }
                 if (actualAge < 7) {

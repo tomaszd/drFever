@@ -14,5 +14,6 @@
     <string name="amountParacetamol7_12"> 1/2 pills every 6-8 hour</string>
     <string name="amountParacetamolAdult"> 1-2 pills 2-4 times a day , not often than 4 hours</string>
     <string name="choose_drug">    Choose drug       </string>
+    <string name="select_age_and_weight">Please select Age and Weight of the patient</string>
 
 </resources>
