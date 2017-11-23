@@ -25,7 +25,7 @@ public class ParacetamolActivity extends AppCompatActivity {
         final TextView textCounted = (TextView) findViewById(R.id.editTextCounted);
 
 
-        SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
+        final SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
         final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeParacetamol);
 
         seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -49,7 +49,7 @@ public class ParacetamolActivity extends AppCompatActivity {
             }
         });
 
-        SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeight);
+        final SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeight);
         final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeightParacetamol);
 
         seekBarWeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -160,7 +160,8 @@ public class ParacetamolActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
                 seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
                 seekBarValue.setText(String.valueOf(actualAge) + " years");
-
+                seekBarAge.setProgress(actualAge * 100 / 20);
+                seekBarWeight.setProgress(actualWeight * 20 / 100);
 
             }
 
