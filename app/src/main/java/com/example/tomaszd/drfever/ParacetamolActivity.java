@@ -161,7 +161,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
                 seekBarValue.setText(String.valueOf(actualAge) + " years");
                 seekBarAge.setProgress(actualAge * 100 / 20);
-                seekBarWeight.setProgress(actualWeight * 20 / 100);
+                seekBarWeight.setProgress(actualWeight * 50 / 10);
 
             }
 
