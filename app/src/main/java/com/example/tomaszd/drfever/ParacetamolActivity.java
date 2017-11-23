@@ -22,7 +22,7 @@ public class ParacetamolActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paracetamol);
 
-        final EditText textCounted = (EditText) findViewById(R.id.editTextCounted);
+        final TextView textCounted = (TextView) findViewById(R.id.editTextCounted);
 
 
         SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
@@ -153,8 +153,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 String actualName = preferences.getString("name", "");
                 actualAge = preferences.getInt("age", 0);
                 actualWeight = preferences.getInt("weight", 0);
-                Toast.makeText(ParacetamolActivity.this, "Data For user Loaded\n"
-                                + "Name: " + actualName + "\n"
+                Toast.makeText(ParacetamolActivity.this, "User loaded: " + actualName + "\n"
                                 + "Age: " + String.valueOf(actualAge) + "\n"
                                 + "Name: " + String.valueOf(actualWeight) + "\n",
 

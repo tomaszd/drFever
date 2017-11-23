@@ -10,7 +10,7 @@
     <string name="weight_in_kg">Weight in kg</string>
     <string name="age">Age</string>
     <string name="weight">Weight</string>
-    <string name="amount_of_drugs_for_the_kid">Amount of drugs for the kid</string>
+    <string name="amount_of_drugs_for_the_kid">Here would be info about amount of drugs</string>
     <string name="amountParacetamol7_12"> 1/2 pills every 6-8 hour</string>
     <string name="amountParacetamolAdult"> 1-2 pills 2-4 times a day , not often than 4 hours</string>
     <string name="choose_drug">    Choose drug       </string>

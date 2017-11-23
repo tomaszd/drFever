@@ -41,17 +41,17 @@
         android:id="@+id/buttonCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonCheckAmotaks"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="@string/count_paracetamol"
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:visibility="visible"
-        android:layout_above="@+id/buttonCheckAmotaks"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="12dp" />
+        android:visibility="visible" />
 
 
     <TextView
@@ -66,9 +66,9 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextCounted"
-        style="@style/Widget.AppCompat.EditText"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/seekBarAge"
@@ -78,7 +78,7 @@
         android:layout_below="@+id/textViewAgeParacetamol"
         android:layout_marginTop="10dp"
         android:ems="12"
-        android:hint="@string/HintAmount"
+        android:hint="Amount of drugs"
         android:inputType="text|textMultiLine"
         android:text="@string/amount_of_drugs_for_the_kid"
         android:textAlignment="center"
@@ -111,16 +111,16 @@
         android:id="@+id/buttonCheckAmotaks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView"
         android:layout_marginBottom="34dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@android:color/holo_green_light"
         android:text="  Check Amotaks  "
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textSize="16sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView"
@@ -146,6 +146,7 @@
         android:text="     Add New User      "
         android:textAllCaps="false"
         android:textSize="18sp" />
+
     <Button
         android:id="@+id/loadUser"
         android:layout_width="wrap_content"
@@ -153,12 +154,12 @@
         android:layout_alignLeft="@+id/editTextCounted"
         android:layout_alignStart="@+id/editTextCounted"
         android:layout_below="@+id/addNewUser"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="14dp"
         android:background="@drawable/button_bg"
         android:backgroundTint="@android:color/holo_green_light"
         android:text="        Load User       "
         android:textAllCaps="false"
-        android:layout_margin="5dp"
-        android:layout_marginBottom="14dp"
         android:textSize="18sp" />
 
 
