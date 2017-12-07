@@ -1,7 +1,5 @@
 package com.example.tomaszd.drfever;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -12,8 +10,6 @@ import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import static android.app.PendingIntent.getActivity;
 
 public class AddNewUserActivity extends AppCompatActivity {
     int actualWeight = 0;
@@ -87,6 +83,7 @@ public class AddNewUserActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //String actualNameValue = ;
                 saveUserData(actualName.getText().toString(), actualAge, actualWeight);
+                onBackPressed();
             }
         });
 

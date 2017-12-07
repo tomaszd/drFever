@@ -104,13 +104,13 @@ public class ParacetamolActivity extends AppCompatActivity {
                     return;
                 }
                 if (actualAge < 7) {
-                    amountOfDrugs = "To the 0-6 years kid give:\n" + String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg\n" +
+                    amountOfDrugs = String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg\n" +
                             "every 4-6 hour";
                 } else if (actualAge >= 7 && actualAge <= 12) {
-                    amountOfDrugs = "To the 7-12 Age kid give:\n" + amountParacetamol7_12;
+                    amountOfDrugs = amountParacetamol7_12;
 
                 } else if (actualAge > 12) {
-                    amountOfDrugs = "Give to older kids/Adults:\n" + amountParacetamolAdult;
+                    amountOfDrugs = amountParacetamolAdult;
                 }
 
                 textCounted.setText(amountOfDrugs);
