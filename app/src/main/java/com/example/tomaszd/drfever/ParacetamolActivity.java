@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -27,6 +29,13 @@ public class ParacetamolActivity extends AppCompatActivity {
 
         final SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
         final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeParacetamol);
+
+        final Button buttonLoadData = (Button) findViewById(R.id.loadUser);
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
+
+        final Button buttonCountParacetamol = (Button) findViewById(R.id.buttonCount);
 
         seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -74,7 +83,6 @@ public class ParacetamolActivity extends AppCompatActivity {
         });
 
 
-        Button button = (Button) findViewById(R.id.buttonCount);
 
 
         /**
@@ -92,9 +100,10 @@ public class ParacetamolActivity extends AppCompatActivity {
          opakowaniu, w miejscu niedostępnym i niewidocznym dla dzieci, zgodnie z wymogami producenta.
          */
 
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonCountParacetamol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                buttonCountParacetamol.setAnimation(shakeButtonAnimation);
                 String amountParacetamol7_12 = getResources().getString(R.string.amountParacetamol7_12);
                 String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
                 Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
@@ -114,6 +123,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 }
 
                 textCounted.setText(amountOfDrugs);
+                view.startAnimation(shakeButtonAnimation);
             }
         });
 
@@ -143,13 +153,13 @@ public class ParacetamolActivity extends AppCompatActivity {
 
         });
 
-        Button buttonLoadData = (Button) findViewById(R.id.loadUser);
-        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
 
 
         buttonLoadData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                buttonLoadData.setAnimation(shakeButtonAnimation);
                 String actualName = preferences.getString("name", "");
                 actualAge = preferences.getInt("age", 0);
                 actualWeight = preferences.getInt("weight", 0);
@@ -162,6 +172,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 seekBarValue.setText(String.valueOf(actualAge) + " years");
                 seekBarAge.setProgress(actualAge * 100 / 20);
                 seekBarWeight.setProgress(actualWeight * 50 / 10);
+                view.startAnimation(shakeButtonAnimation);
 
             }
 
