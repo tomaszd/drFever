@@ -126,7 +126,7 @@ public class ParacetamolActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCheckAmotaks = (Button) findViewById(R.id.buttonSelectdrug);
+        Button buttonCheckAmotaks = (Button) findViewById(R.id.buttonSelectDrug);
         buttonCheckAmotaks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
