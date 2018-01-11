@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Check Amotaks",
                         Toast.LENGTH_LONG).show();
 
-                Intent myIntent = new Intent(MainActivity.this, AmotaksActivity.class);
+                Intent myIntent = new Intent(MainActivity.this, SelectDrugActivity.class);
                 MainActivity.this.startActivity(myIntent);
             }
 

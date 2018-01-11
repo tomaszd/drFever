@@ -7,21 +7,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class AmotaksActivity extends AppCompatActivity {
+public class SelectDrugActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.amotaks_main);
+        setContentView(R.layout.select_drug);
 
         Button buttonParacetamol = (Button) findViewById(R.id.buttonParacetamol);
         buttonParacetamol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(AmotaksActivity.this, "Let's Check Paracetamol",
+                Toast.makeText(SelectDrugActivity.this, "Let's Check Paracetamol",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(AmotaksActivity.this, ParacetamolActivity.class);
-                AmotaksActivity.this.startActivity(myIntent);
+                Intent myIntent = new Intent(SelectDrugActivity.this, ParacetamolActivity.class);
+                SelectDrugActivity.this.startActivity(myIntent);
             }
         });
 
@@ -29,10 +29,10 @@ public class AmotaksActivity extends AppCompatActivity {
         buttonAmotaks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(AmotaksActivity.this, "Let's Count Amotaks",
+                Toast.makeText(SelectDrugActivity.this, "Let's Count Amotaks",
                         Toast.LENGTH_LONG).show();
-                //Intent myIntent = new Intent(AmotaksActivity.this, MainActivity.class);
-                //AmotaksActivity.this.startActivity(myIntent);
+                //Intent myIntent = new Intent(SelectDrugActivity.this, MainActivity.class);
+                //SelectDrugActivity.this.startActivity(myIntent);
             }
         });
 

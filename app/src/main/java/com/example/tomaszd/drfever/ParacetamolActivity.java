@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -133,7 +132,7 @@ public class ParacetamolActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(ParacetamolActivity.this, "Check Amotaks",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(ParacetamolActivity.this, AmotaksActivity.class);
+                Intent myIntent = new Intent(ParacetamolActivity.this, SelectDrugActivity.class);
                 ParacetamolActivity.this.startActivity(myIntent);
             }
 
