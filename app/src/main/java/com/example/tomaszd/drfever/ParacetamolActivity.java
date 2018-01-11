@@ -78,8 +78,6 @@ public class ParacetamolActivity extends AppCompatActivity {
         });
 
 
-
-
         /**
          * Dawkowanie:
 
@@ -173,8 +171,9 @@ public class ParacetamolActivity extends AppCompatActivity {
                 buttonSeeDosageDetails.setAnimation(shakeButtonAnimation);
                 Toast.makeText(ParacetamolActivity.this, "Check details",
                         Toast.LENGTH_LONG).show();
-                //Intent myIntent = new Intent(ParacetamolActivity.this, AddNewUserActivity.class);
-                //ParacetamolActivity.this.startActivity(myIntent);
+                Intent myIntent = new Intent(ParacetamolActivity.this, DosageDetails.class);
+                myIntent.putExtra("paracetamolAmount", "25");
+                startActivity(myIntent);
             }
 
 
