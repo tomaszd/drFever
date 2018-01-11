@@ -13,7 +13,6 @@ public class SelectDrugActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select_drug);
-
         Button buttonParacetamol = (Button) findViewById(R.id.buttonParacetamol);
         buttonParacetamol.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,7 +23,6 @@ public class SelectDrugActivity extends AppCompatActivity {
                 SelectDrugActivity.this.startActivity(myIntent);
             }
         });
-
         Button buttonAmotaks = (Button) findViewById(R.id.buttonAmotaks);
         buttonAmotaks.setOnClickListener(new View.OnClickListener() {
             @Override
