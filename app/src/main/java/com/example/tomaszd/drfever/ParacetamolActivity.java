@@ -164,7 +164,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 actualWeight = preferences.getInt("weight", 0);
                 Toast.makeText(ParacetamolActivity.this, "User loaded: " + actualName + "\n"
                                 + "Age: " + String.valueOf(actualAge) + "\n"
-                                + "Name: " + String.valueOf(actualWeight) + "\n",
+                                + "Name: " + String.valueOf(actualWeight),
 
                         Toast.LENGTH_LONG).show();
                 seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
