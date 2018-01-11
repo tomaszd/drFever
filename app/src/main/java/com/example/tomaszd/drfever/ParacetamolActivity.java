@@ -24,17 +24,13 @@ public class ParacetamolActivity extends AppCompatActivity {
         setContentView(R.layout.activity_paracetamol);
 
         final TextView textCounted = (TextView) findViewById(R.id.editTextCounted);
-
-
         final SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
         final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeParacetamol);
-
         final Button buttonLoadData = (Button) findViewById(R.id.loadUser);
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-
         final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
-
         final Button buttonCountParacetamol = (Button) findViewById(R.id.buttonCount);
+        final Button buttonSeeDosageDetails = (Button) findViewById(R.id.seeDosageDetails);
 
         seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -152,9 +148,6 @@ public class ParacetamolActivity extends AppCompatActivity {
 
         });
 
-
-
-
         buttonLoadData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -172,7 +165,16 @@ public class ParacetamolActivity extends AppCompatActivity {
                 seekBarAge.setProgress(actualAge * 100 / 20);
                 seekBarWeight.setProgress(actualWeight * 50 / 10);
                 view.startAnimation(shakeButtonAnimation);
-
+            }
+        });
+        buttonSeeDosageDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonSeeDosageDetails.setAnimation(shakeButtonAnimation);
+                Toast.makeText(ParacetamolActivity.this, "Check details",
+                        Toast.LENGTH_LONG).show();
+                //Intent myIntent = new Intent(ParacetamolActivity.this, AddNewUserActivity.class);
+                //ParacetamolActivity.this.startActivity(myIntent);
             }
 
 
