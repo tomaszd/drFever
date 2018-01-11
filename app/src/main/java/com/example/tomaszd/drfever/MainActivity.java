@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCheckAmotaks = (Button) findViewById(R.id.buttonCheckAmotaks);
+        Button buttonCheckAmotaks = (Button) findViewById(R.id.buttonSelectdrug);
         buttonCheckAmotaks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

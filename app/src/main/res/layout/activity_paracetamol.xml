@@ -108,7 +108,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/buttonCheckAmotaks"
+        android:id="@+id/buttonSelectdrug"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/editTextCounted"
@@ -116,7 +116,7 @@
         android:layout_alignTop="@+id/addNewUser"
         android:background="@drawable/button_bg"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="  Check Amotaks  "
+        android:text="    Select Drug    "
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="16sp" />

@@ -152,7 +152,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/buttonCheckAmotaks"
+        android:id="@+id/buttonSelectdrug"
         android:background="@drawable/button_bg"
         android:backgroundTint="@android:color/holo_green_light"
         android:layout_width="wrap_content"
