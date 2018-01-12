@@ -17,5 +17,6 @@
     <string name="select_age_and_weight">Please select Age and Weight of the patient</string>
     <string name="check_amotaks">Select drug: </string>
     <string name="select_drug">Select drug:</string>
+    <string name="title_activity_obrazek">obrazek</string>
 
 </resources>
