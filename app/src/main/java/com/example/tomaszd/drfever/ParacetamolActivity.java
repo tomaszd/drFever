@@ -17,6 +17,9 @@ public class ParacetamolActivity extends AppCompatActivity {
     private int actualAge = 0;
     private int actualWeight = 0;
     private String amountOfDrugs = "";
+    private double amountOfParacetamolMin;
+    private double amountOfParacetamolMax;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +99,7 @@ public class ParacetamolActivity extends AppCompatActivity {
         buttonCountParacetamol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 buttonCountParacetamol.setAnimation(shakeButtonAnimation);
                 String amountParacetamol7_12 = getResources().getString(R.string.amountParacetamol7_12);
                 String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
@@ -106,12 +110,21 @@ public class ParacetamolActivity extends AppCompatActivity {
                     return;
                 }
                 if (actualAge < 7) {
-                    amountOfDrugs = String.valueOf(actualWeight * 10) + "-" + String.valueOf(actualWeight * 15) + " mg\n" +
+                    amountOfParacetamolMin = actualWeight * 10;
+                    amountOfParacetamolMax = actualWeight * 15;
+                    amountOfDrugs = String.valueOf(amountOfParacetamolMin) + "-" + String.valueOf(amountOfParacetamolMax) + " mg\n" +
                             "every 4-6 hour";
+
                 } else if (actualAge >= 7 && actualAge <= 12) {
+                    //1/2 pills every 6-8 hour
+                    amountOfParacetamolMin = 0.5 * 500 * 3;// ( 0.5 pill every 8 hours = 0.5 pill 3 times a day )
+                    amountOfParacetamolMax = 0.5 * 500 * 4;// ( 0.5 pill every 6 hours = 0.5 pill 4 times a day )
                     amountOfDrugs = amountParacetamol7_12;
 
                 } else if (actualAge > 12) {
+                    //1-2 pills 2-4 times a day , not often than 4 hours
+                    amountOfParacetamolMin = 1 * 500 * 2;// ( 1 pill 2 times a day = )
+                    amountOfParacetamolMax = 2 * 500 * 4;// (2 pills 4 times a day )
                     amountOfDrugs = amountParacetamolAdult;
                 }
 
@@ -172,7 +185,9 @@ public class ParacetamolActivity extends AppCompatActivity {
                 Toast.makeText(ParacetamolActivity.this, "Check details",
                         Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(ParacetamolActivity.this, DosageDetails.class);
-                myIntent.putExtra("paracetamolAmount", "25");
+                myIntent.putExtra("paracetamolAmount", amountOfDrugs);
+                myIntent.putExtra("amountOfParacetamolMin", amountOfParacetamolMin);
+                myIntent.putExtra("amountOfParacetamolMax", amountOfParacetamolMax);
                 startActivity(myIntent);
             }
 
