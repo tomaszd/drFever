@@ -13,43 +13,41 @@
         android:id="@+id/textSelectDrug"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="35dp"
-        android:layout_marginLeft="82dp"
-        android:layout_marginStart="82dp"
-        android:text="@string/select_drug"
+        android:layout_marginBottom="17dp"
+        android:text="Wybierz lek:"
         android:textColor="@android:color/black"
         android:textSize="45sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="103dp" />
+        tools:layout_editor_absoluteY="103dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:orientation="horizontal"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout">
+        android:layout_width="220dp"
+        android:layout_height="360dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp">
 
         <Button
             android:id="@+id/buttonParacetamol"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_margin="13dp"
             android:layout_weight="1"
             android:background="@drawable/paracetamol_transparent"
             android:elevation="0dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
         <Button
             android:id="@+id/buttonIbupren"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
             android:layout_margin="13dp"
             android:layout_weight="1"
             android:background="@drawable/ibuprofen_transparent"/>
