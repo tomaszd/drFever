@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.StringDef;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -112,8 +113,10 @@ public class ParacetamolActivity extends AppCompatActivity {
                 if (actualAge < 7) {
                     amountOfParacetamolMin = actualWeight * 10;
                     amountOfParacetamolMax = actualWeight * 15;
-                    amountOfDrugs = String.valueOf(amountOfParacetamolMin) + "-" + String.valueOf(amountOfParacetamolMax) + " mg\n" +
-                            "every 4-6 hour";
+                    amountOfDrugs = "Usually 10-15 mg/kg of weight.\nWhich means "
+                            + String.valueOf(amountOfParacetamolMin) + "-"
+                            + String.valueOf(amountOfParacetamolMax) + " for weight = "
+                            + String.valueOf(actualWeight) + "kg.";
 
                 } else if (actualAge >= 7 && actualAge <= 12) {
                     //1/2 pills every 6-8 hour

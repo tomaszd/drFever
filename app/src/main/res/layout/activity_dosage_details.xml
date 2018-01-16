@@ -9,7 +9,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dosage Details text:" />
+        android:text="Dosage Details :"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/textDosageDetails"
@@ -17,7 +19,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Dosage Details" />
+        android:text="Dosage Details"
+        android:textSize="24sp"
+        android:textStyle="italic" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,16 +34,21 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/lblMaxParacetamol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MAX Amount in mg" />
+            android:text="MAX Amount in mg"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/editMaxParacetamol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MIN Amount in mg" />
+            android:text="MIN Amount in mg"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -49,16 +58,21 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/lblMinParacetamol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MAX Amount in mg" />
+            android:text="MAX Amount in mg"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/editMinParacetamol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MAX Amount in mg" />
+            android:text="MAX Amount in mg"
+            android:textSize="24sp" />
     </LinearLayout>
 </LinearLayout>
 
