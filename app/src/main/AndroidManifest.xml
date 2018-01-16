@@ -21,10 +21,6 @@
         <activity android:name=".ParacetamolActivity" />
         <activity android:name=".AddNewUserActivity" />
         <activity android:name=".DosageDetails" />
-        <activity
-            android:name=".obrazek"
-            android:label="@string/title_activity_obrazek"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
