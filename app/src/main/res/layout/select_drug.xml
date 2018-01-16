@@ -40,7 +40,7 @@
             android:id="@+id/buttonParacetamol"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
+            android:layout_margin="13dp"
             android:layout_weight="1"
             android:background="@drawable/paracetamol_transparent"
             android:elevation="0dp"
@@ -50,7 +50,7 @@
             android:id="@+id/buttonIbupren"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
+            android:layout_margin="13dp"
             android:layout_weight="1"
             android:background="@drawable/ibuprofen_transparent"/>
     </LinearLayout>
