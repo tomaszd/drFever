@@ -23,16 +23,7 @@ public class SelectDrugActivity extends AppCompatActivity {
                 SelectDrugActivity.this.startActivity(myIntent);
             }
         });
-        Button buttonAmotaks = (Button) findViewById(R.id.buttonAmotaks);
-        buttonAmotaks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SelectDrugActivity.this, "Let's Count Amotaks",
-                        Toast.LENGTH_LONG).show();
-                //Intent myIntent = new Intent(SelectDrugActivity.this, MainActivity.class);
-                //SelectDrugActivity.this.startActivity(myIntent);
-            }
-        });
+
 
 
     }

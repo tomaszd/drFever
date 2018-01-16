@@ -60,5 +60,5 @@
             android:layout_weight="1"
             android:text="MAX Amount in mg" />
     </LinearLayout>
-
+</LinearLayout>
 
