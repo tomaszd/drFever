@@ -27,7 +27,7 @@ public class ParacetamolActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paracetamol);
 
-        final TextView textCounted = (TextView) findViewById(R.id.editTextCounted);
+        //final TextView textCounted = (TextView) findViewById(R.id.editTextCounted);
         final SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
         final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeParacetamol);
         // final Button buttonLoadData = (Button) findViewById(R.id.loadUser);
@@ -107,7 +107,8 @@ public class ParacetamolActivity extends AppCompatActivity {
                 Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
                 if (actualWeight == 0 || actualAge == 0) {
-                    textCounted.setText(R.string.select_age_and_weight);
+                    Toast.makeText(ParacetamolActivity.this, "Please add values greater than 0",
+                            Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (actualAge < 7) {
@@ -131,24 +132,31 @@ public class ParacetamolActivity extends AppCompatActivity {
                     amountOfDrugs = amountParacetamolAdult;
                 }
 
-                textCounted.setText(amountOfDrugs);
+                //textCounted.setText(amountOfDrugs);
                 view.startAnimation(shakeButtonAnimation);
-            }
-        });
-
-        Button buttonCheckAmotaks = (Button) findViewById(R.id.buttonSelectDrug);
-        buttonCheckAmotaks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(ParacetamolActivity.this, "Check Amotaks",
+                Toast.makeText(ParacetamolActivity.this, "Check details",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(ParacetamolActivity.this, SelectDrugActivity.class);
-                ParacetamolActivity.this.startActivity(myIntent);
+                Intent myIntent = new Intent(ParacetamolActivity.this, DosageDetails.class);
+                myIntent.putExtra("paracetamolAmount", amountOfDrugs);
+                myIntent.putExtra("amountOfParacetamolMin", amountOfParacetamolMin);
+                myIntent.putExtra("amountOfParacetamolMax", amountOfParacetamolMax);
+                startActivity(myIntent);
+
             }
-
-
         });
         /**
+         Button buttonCheckAmotaks = (Button) findViewById(R.id.buttonSelectDrug);
+         buttonCheckAmotaks.setOnClickListener(new View.OnClickListener() {
+        @Override public void onClick(View view) {
+        Toast.makeText(ParacetamolActivity.this, "Check Amotaks",
+        Toast.LENGTH_LONG).show();
+        Intent myIntent = new Intent(ParacetamolActivity.this, SelectDrugActivity.class);
+        ParacetamolActivity.this.startActivity(myIntent);
+        }
+
+
+        });
+
          Button buttonAddNewUser = (Button) findViewById(R.id.addNewUser);
          buttonAddNewUser.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View view) {
