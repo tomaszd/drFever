@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
-        android:text="Wybierz lek:"
+        android:text="WYBIERZ LEK"
         android:textColor="@android:color/black"
         android:textSize="45sp"
         android:textStyle="bold"
@@ -25,7 +25,7 @@
 
 
     <LinearLayout
-        android:layout_width="220dp"
+        android:layout_width="190dp"
         android:layout_height="360dp"
         android:orientation="vertical"
         android:id="@+id/linearLayout"
