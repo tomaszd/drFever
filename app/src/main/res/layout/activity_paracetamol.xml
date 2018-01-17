@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/textViewWeightInKgParacetamol"
             android:layout_width="120dp"
@@ -25,8 +26,8 @@
             android:id="@+id/textViewWeightParacetamol"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_weight="1"
             android:layout_marginTop="10dp"
+            android:layout_weight="1"
             android:text="@string/weight"
             android:textAlignment="center"
             android:textSize="18sp"
@@ -35,11 +36,16 @@
 
     <SeekBar
         android:id="@+id/seekBarWeight"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewAgeParacetamol"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="47dp"
+        android:max="50"
+        android:progress="10"
+        android:colorControlActivated="#e40c3f"
+        android:colorControlNormal="#00b0ff"
         android:visibility="visible" />
 
     <LinearLayout
@@ -69,9 +75,14 @@
 
     <SeekBar
         android:id="@+id/seekBarAge"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:colorControlActivated="#e40c3f"
+        android:colorControlNormal="#00b0ff"
+        android:max="50"
+        android:progress="10"
         android:layout_marginBottom="20dp" />
 
     <TextView
@@ -102,71 +113,6 @@
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/addNewUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_bg"
-            android:backgroundTint="@android:color/holo_blue_dark"
-            android:text="    Add New User        "
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
-
-        <Button
-            android:id="@+id/loadUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_bg"
-            android:backgroundTint="@android:color/holo_blue_bright"
-            android:text="         Load User        "
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/buttonSelectDrug"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_bg"
-            android:backgroundTint="@android:color/holo_green_light"
-            android:text="          Select Drug         "
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
-
-        <Button
-            android:id="@+id/seeDosageDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_bg"
-            android:backgroundTint="@android:color/holo_orange_light"
-            android:text="Dosage Details"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:textStyle="bold|italic" />
-
-
-    </LinearLayout>
 
 
 </LinearLayout>
