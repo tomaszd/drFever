@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="MIN dawka (mg)"
+            android:textColor="@android:color/holo_green_light"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -25,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@android:color/holo_green_light"
             android:text="MAX dawka (mg)"
             android:textSize="20sp" />
 
@@ -41,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="MAX dawka (mg)"
+            android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -50,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="MAX Amount in (mg)"
+            android:textColor="@android:color/holo_red_light"
             android:textSize="20sp" />
     </LinearLayout>
 
