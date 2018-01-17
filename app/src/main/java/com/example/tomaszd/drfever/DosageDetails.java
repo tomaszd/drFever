@@ -21,8 +21,8 @@ public class DosageDetails extends AppCompatActivity {
         final EditText editMinParacetamol = (EditText) findViewById(R.id.editMinParacetamol);
         Intent myIntent = getIntent();
         String paracetamolAmountValue = myIntent.getStringExtra("paracetamolAmount");
-        Double amountOfParacetamolMinValue = myIntent.getDoubleExtra("amountOfParacetamolMin",0.0);
-        Double amountOfParacetamolMaxValue = myIntent.getDoubleExtra("amountOfParacetamolMax",0.0);
+        Double amountOfParacetamolMinValue = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
+        Double amountOfParacetamolMaxValue = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
         //dosageEditText.setText("Get : " + paracetamolAmountValue);
         editMaxParacetamol.setText(String.valueOf(amountOfParacetamolMaxValue));
         editMinParacetamol.setText(String.valueOf(amountOfParacetamolMinValue));
@@ -46,6 +46,17 @@ public class DosageDetails extends AppCompatActivity {
                 Toast.makeText(DosageDetails.this, "Sirop",
                         Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(DosageDetails.this, SirupDosageActivity.class);
+                DosageDetails.this.startActivity(myIntent);
+            }
+        });
+        //czopki
+        Button buttonCzopek = (Button) findViewById(R.id.buttonCzopek);
+        buttonCzopek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(DosageDetails.this, "Czopek",
+                        Toast.LENGTH_LONG).show();
+                Intent myIntent = new Intent(DosageDetails.this, CzopekActivity.class);
                 DosageDetails.this.startActivity(myIntent);
             }
         });

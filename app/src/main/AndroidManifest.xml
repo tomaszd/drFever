@@ -22,7 +22,8 @@
         <activity android:name=".AddNewUserActivity" />
         <activity android:name=".DosageDetails" />
         <activity android:name=".PillDosageActivity" />
-        <activity android:name=".SirupDosageActivity"></activity>
+        <activity android:name=".SirupDosageActivity" />
+        <activity android:name=".CzopekActivity"></activity>
     </application>
 
 </manifest>
