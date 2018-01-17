@@ -6,28 +6,6 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dosage Details :"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/textDosageDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Dosage Details"
-        android:textSize="20sp"
-        android:textStyle="italic" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dosage Details in mg:" />
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -38,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MIN in mg"
+            android:text="MIN dawka (mg)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -47,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MIN Amount in mg"
+            android:text="MAX dawka (mg)"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -62,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MAX in mg"
+            android:text="MAX dawka (mg)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -71,20 +49,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MAX Amount in mg"
+            android:text="MAX Amount in (mg)"
             android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="130dp"
-        android:layout_height="320dp"
+        android:layout_width="160dp"
+        android:layout_height="400dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/buttonSirop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/syrop_button" />
+
+        <Button
+            android:id="@+id/buttonCzopek"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/syrop_button" />
 
         <Button
             android:id="@+id/buttonPill"
@@ -96,20 +91,6 @@
             android:background="@drawable/pill_button"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-        <Button
-            android:id="@+id/buttonSirop"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/syrop_button" />
-        <Button
-            android:id="@+id/buttonCzopek"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/syrop_button" />
     </LinearLayout>
 </LinearLayout>
 
