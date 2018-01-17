@@ -15,7 +15,7 @@
         android:layout_marginTop="20dp"
         android:text="SYROP"
         android:textAlignment="center"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="?attr/colorControlNormal"
         android:textSize="45sp"
         android:textStyle="bold" />
 
