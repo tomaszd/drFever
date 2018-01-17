@@ -21,6 +21,7 @@
         <activity android:name=".ParacetamolActivity" />
         <activity android:name=".AddNewUserActivity" />
         <activity android:name=".DosageDetails" />
+        <activity android:name=".PillDosageActivity"></activity>
     </application>
 
 </manifest>
