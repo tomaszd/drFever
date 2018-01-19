@@ -29,7 +29,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(DosageDetailsIbuprofen.this, "Pills",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(DosageDetailsIbuprofen.this, PillDosageActivity.class);
+                Intent myIntent = new Intent(DosageDetailsIbuprofen.this, PillDosageIbuprofenActivity.class);
                 DosageDetailsIbuprofen.this.startActivity(myIntent);
             }
         });
@@ -41,7 +41,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(DosageDetailsIbuprofen.this, "Sirop",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(DosageDetailsIbuprofen.this, SirupDosageActivity.class);
+                Intent myIntent = new Intent(DosageDetailsIbuprofen.this, SirupDosageIbuprofenActivity.class);
                 DosageDetailsIbuprofen.this.startActivity(myIntent);
             }
         });
@@ -52,7 +52,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(DosageDetailsIbuprofen.this, "Czopek",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(DosageDetailsIbuprofen.this, CzopekActivity.class);
+                Intent myIntent = new Intent(DosageDetailsIbuprofen.this, CzopekIbuprofenActivity.class);
                 DosageDetailsIbuprofen.this.startActivity(myIntent);
             }
         });

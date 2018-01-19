@@ -18,5 +18,6 @@
     <string name="check_amotaks">Select drug: </string>
     <string name="select_drug">Select drug:</string>
     <string name="title_activity_obrazek">obrazek</string>
+    <string name="syrop">SYROP Ibuprofen</string>
 
 </resources>

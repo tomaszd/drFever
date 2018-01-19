@@ -25,7 +25,10 @@
         <activity android:name=".SirupDosageActivity" />
         <activity android:name=".CzopekActivity" />
         <activity android:name=".IbuprofenActivity" />
-        <activity android:name=".DosageDetailsIbuprofen"></activity>
+        <activity android:name=".DosageDetailsIbuprofen" />
+        <activity android:name=".PillDosageIbuprofenActivity" />
+        <activity android:name=".SirupDosageIbuprofenActivity" />
+        <activity android:name=".CzopekIbuprofenActivity"></activity>
     </application>
 
 </manifest>

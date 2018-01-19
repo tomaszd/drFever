@@ -25,13 +25,13 @@ public class SelectDrugActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonIbuprofen = (Button) findViewById(R.id.buttonIbupren);
+        Button buttonIbuprofen = (Button) findViewById(R.id.buttonIbuprofen);
         buttonIbuprofen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(SelectDrugActivity.this, "Ibuprofen",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(SelectDrugActivity.this, IbuprenActivity.class);
+                Intent myIntent = new Intent(SelectDrugActivity.this, IbuprofenActivity.class);
                 SelectDrugActivity.this.startActivity(myIntent);
             }
         });
