@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewWeightInKgIbupren"
+            android:id="@+id/textViewWeightInKgIbuprofen"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginBottom="10dp"
@@ -24,7 +24,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewWeightInKgIbuprenValue"
+            android:id="@+id/textViewWeightInKgIbuprofenValue"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
@@ -36,7 +36,7 @@
     </LinearLayout>
 
     <SeekBar
-        android:id="@+id/seekBarWeightIbupren"
+        android:id="@+id/seekBarWeightIbuprofen"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textViewAgeOfChildIbupren"
+            android:id="@+id/textViewAgeOfChildIbuprofen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -76,7 +76,7 @@
     </LinearLayout>
 
     <SeekBar
-        android:id="@+id/seekBarAgeIbupren"
+        android:id="@+id/seekBarAgeIbuprofen"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/buttonCountIbupren"
+            android:id="@+id/buttonCountIbuprofen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"

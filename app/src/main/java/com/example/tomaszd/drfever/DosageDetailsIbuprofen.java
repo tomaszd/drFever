@@ -1,12 +1,11 @@
 package com.example.tomaszd.drfever;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class DosageDetailsIbuprofen extends AppCompatActivity {
@@ -15,17 +14,16 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dosage_details);
+        setContentView(R.layout.activity_dosage_details_ibuprofen);
         final EditText editMaxIbuprofen = (EditText) findViewById(R.id.editMaxIbuprofen);
         final EditText editMinIbuprofen = (EditText) findViewById(R.id.editMinIbuprofen);
         Intent myIntent = getIntent();
-        String ibuprofenAmountValue = myIntent.getStringExtra("ibuprofenAmount");
         Double amountOfIbuprofenMinValue = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
         Double amountOfIbuprofenMaxValue = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
         editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMaxValue));
         editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMinValue));
         //Pills
-        Button buttonPill = (Button) findViewById(R.id.buttonPill);
+        Button buttonPill = (Button) findViewById(R.id.buttonPillIbuprofen);
         buttonPill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +35,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         });
 
         //syrop
-        Button buttonSyrop = (Button) findViewById(R.id.buttonSirop);
+        Button buttonSyrop = (Button) findViewById(R.id.buttonSiropIbuprofen);
         buttonSyrop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +46,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
             }
         });
         //czopki
-        Button buttonCzopek = (Button) findViewById(R.id.buttonCzopek);
+        Button buttonCzopek = (Button) findViewById(R.id.buttonCzopekIbuprofen);
         buttonCzopek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -13,23 +13,23 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class IbuprenActivity extends AppCompatActivity {
+public class IbuprofenActivity extends AppCompatActivity {
     private int actualAge = 0;
     private int actualWeight = 0;
     private String amountOfDrugs = "";
-    private double amountOfIbuprenMin;
-    private double amountOfIbuprenMax;
+    private double amountOfIbuprofenMin;
+    private double amountOfIbuprofenMax;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ibupren);
+        setContentView(R.layout.activity_Ibuprofen);
 
-        final SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAgeIbupren);
+        final SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAgeIbuprofen);
         final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeIbupremValue);
         final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
-        final Button buttonCountIbuprem = (Button) findViewById(R.id.buttonCountIbupren);
+        final Button buttonCountIbuprem = (Button) findViewById(R.id.buttonCountIbuprofen);
 
 
         seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -53,8 +53,8 @@ public class IbuprenActivity extends AppCompatActivity {
             }
         });
 
-        final SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeightIbupren);
-        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeightInKgIbuprenValue);
+        final SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeightIbuprofen);
+        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeightInKgIbuprofenValue);
 
         seekBarWeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -100,40 +100,40 @@ public class IbuprenActivity extends AppCompatActivity {
                 buttonCountIbuprem.setAnimation(shakeButtonAnimation);
                 String amountParacetamol7_12 = getResources().getString(R.string.amountParacetamol7_12);
                 String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
-                Toast.makeText(IbuprenActivity.this, "Counting of drug amount in Progress...",
+                Toast.makeText(IbuprofenActivity.this, "Counting of drug amount in Progress...",
                         Toast.LENGTH_LONG).show();
                 if (actualWeight == 0 || actualAge == 0) {
-                    Toast.makeText(IbuprenActivity.this, "Please add values greater than 0",
+                    Toast.makeText(IbuprofenActivity.this, "Please add values greater than 0",
                             Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (actualAge < 7) {
-                    amountOfIbuprenMin = actualWeight * 10;
-                    amountOfIbuprenMax = actualWeight * 15;
+                    amountOfIbuprofenMin = actualWeight * 10;
+                    amountOfIbuprofenMax = actualWeight * 15;
                     amountOfDrugs = "Usually 10-15 mg/kg of weight.\nWhich means "
-                            + String.valueOf(amountOfIbuprenMin) + "-"
-                            + String.valueOf(amountOfIbuprenMax) + " for weight = "
+                            + String.valueOf(amountOfIbuprofenMin) + "-"
+                            + String.valueOf(amountOfIbuprofenMax) + " for weight = "
                             + String.valueOf(actualWeight) + "kg.";
 
                 } else if (actualAge >= 7 && actualAge <= 12) {
                     //1/2 pills every 6-8 hour
-                    amountOfIbuprenMin = 0.5 * 500 * 3;// ( 0.5 pill every 8 hours = 0.5 pill 3 times a day )
-                    amountOfIbuprenMax = 0.5 * 500 * 4;// ( 0.5 pill every 6 hours = 0.5 pill 4 times a day )
+                    amountOfIbuprofenMin = 0.5 * 500 * 3;// ( 0.5 pill every 8 hours = 0.5 pill 3 times a day )
+                    amountOfIbuprofenMax = 0.5 * 500 * 4;// ( 0.5 pill every 6 hours = 0.5 pill 4 times a day )
                     amountOfDrugs = amountParacetamol7_12;
 
                 } else if (actualAge > 12) {
                     //1-2 pills 2-4 times a day , not often than 4 hours
-                    amountOfIbuprenMin = 1 * 500 * 2;// ( 1 pill 2 times a day = )
-                    amountOfIbuprenMax = 2 * 500 * 4;// (2 pills 4 times a day )
+                    amountOfIbuprofenMin = 1 * 500 * 2;// ( 1 pill 2 times a day = )
+                    amountOfIbuprofenMax = 2 * 500 * 4;// (2 pills 4 times a day )
                     amountOfDrugs = amountParacetamolAdult;
                 }
                 view.startAnimation(shakeButtonAnimation);
-                Toast.makeText(IbuprenActivity.this, "Check details",
+                Toast.makeText(IbuprofenActivity.this, "Check details",
                         Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(IbuprenActivity.this, DosageDetailsIbuprofen.class);
+                Intent myIntent = new Intent(IbuprofenActivity.this, DosageDetailsIbuprofen.class);
                 myIntent.putExtra("ibuprofenAmount", amountOfDrugs);
-                myIntent.putExtra("amountOfIbuprofenMin", amountOfIbuprenMin);
-                myIntent.putExtra("amountOfIbuprofenMax", amountOfIbuprenMax);
+                myIntent.putExtra("amountOfIbuprofenMin", amountOfIbuprofenMin);
+                myIntent.putExtra("amountOfIbuprofenMax", amountOfIbuprofenMax);
                 startActivity(myIntent);
 
             }
