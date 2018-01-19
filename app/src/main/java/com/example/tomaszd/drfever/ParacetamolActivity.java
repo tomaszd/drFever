@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.StringDef;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -134,8 +133,6 @@ public class ParacetamolActivity extends AppCompatActivity {
 
                 //textCounted.setText(amountOfDrugs);
                 view.startAnimation(shakeButtonAnimation);
-                Toast.makeText(ParacetamolActivity.this, "Check details",
-                        Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(ParacetamolActivity.this, DosageDetails.class);
                 myIntent.putExtra("paracetamolAmount", amountOfDrugs);
                 myIntent.putExtra("amountOfParacetamolMin", amountOfParacetamolMin);
@@ -144,64 +141,6 @@ public class ParacetamolActivity extends AppCompatActivity {
 
             }
         });
-        /**
-         Button buttonCheckAmotaks = (Button) findViewById(R.id.buttonSelectDrug);
-         buttonCheckAmotaks.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View view) {
-        Toast.makeText(ParacetamolActivity.this, "Check Amotaks",
-        Toast.LENGTH_LONG).show();
-        Intent myIntent = new Intent(ParacetamolActivity.this, SelectDrugActivity.class);
-        ParacetamolActivity.this.startActivity(myIntent);
-        }
-
-
-        });
-
-         Button buttonAddNewUser = (Button) findViewById(R.id.addNewUser);
-         buttonAddNewUser.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View view) {
-        Toast.makeText(ParacetamolActivity.this, "Please Add New User Data",
-        Toast.LENGTH_LONG).show();
-        Intent myIntent = new Intent(ParacetamolActivity.this, AddNewUserActivity.class);
-        ParacetamolActivity.this.startActivity(myIntent);
-        }
-
-
-        });
-
-         buttonLoadData.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View view) {
-        buttonLoadData.setAnimation(shakeButtonAnimation);
-        String actualName = preferences.getString("name", "");
-        actualAge = preferences.getInt("age", 0);
-        actualWeight = preferences.getInt("weight", 0);
-        Toast.makeText(ParacetamolActivity.this, "User loaded: " + actualName + "\n"
-        + "Age: " + String.valueOf(actualAge) + "\n"
-        + "Name: " + String.valueOf(actualWeight),
-
-        Toast.LENGTH_LONG).show();
-        seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
-        seekBarValue.setText(String.valueOf(actualAge) + " years");
-        seekBarAge.setProgress(actualAge * 100 / 20);
-        seekBarWeight.setProgress(actualWeight * 50 / 10);
-        view.startAnimation(shakeButtonAnimation);
-        }
-        });
-         buttonSeeDosageDetails.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View view) {
-        buttonSeeDosageDetails.setAnimation(shakeButtonAnimation);
-        Toast.makeText(ParacetamolActivity.this, "Check details",
-        Toast.LENGTH_LONG).show();
-        Intent myIntent = new Intent(ParacetamolActivity.this, DosageDetails.class);
-        myIntent.putExtra("paracetamolAmount", amountOfDrugs);
-        myIntent.putExtra("amountOfParacetamolMin", amountOfParacetamolMin);
-        myIntent.putExtra("amountOfParacetamolMax", amountOfParacetamolMax);
-        startActivity(myIntent);
-        }
-
-
-        });
-         */
 
     }
 }

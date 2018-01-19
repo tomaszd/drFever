@@ -79,16 +79,15 @@ public class IbuprofenActivity extends AppCompatActivity {
         /**
          * Dawkowanie:
 
-         Doustnie. Dorośli: 1-2 tabletki 2-4 razy na dobę, nie częściej niż co 4 godziny
-         (maksymalna dawka dobowa w leczeniu doraźnym wynosi 4 g, w leczeniu długotrwałym 2,6 g).
-         Dzieci: dawkę leku ustala się w zależności od wieku i masy ciała dziecka, zazwyczaj
-         10-15 mg/kg masy ciała. Dzieci 7-12 rok życia: 1/2 tabletki co 6-8 godzin.
-         Należy zasięgnąć opinii lekarza jeśli ból utrzymuje się dłużej niż 10 dni,
-         a gorączka dłużej niż 3 dni.   W czasie stosowania leku nie należy pić alkoholu.
-         Zapoznaj się z właściwościami leku opisanymi w ulotce przed jego zastosowaniem.
-         Przed zastosowaniem leku należy sprawdzić datę ważności podaną na opakowaniu (etykiecie).
-         Nie należy stosować leku po terminie ważności. Przechowuj lek w szczelnie zamkniętym
-         opakowaniu, w miejscu niedostępnym i niewidocznym dla dzieci, zgodnie z wymogami producenta.
+         Indywidualnie w zależności od stopnia ciężkości choroby i tolerancji na lek. Podane dawki
+         odnoszą się do ibuprofenu w postaci racematu, w razie stosowania deksibuprofenu powinny być 
+         zmniejszone o 25% (100 mg mieszaniny racemicznej odpowiada 75 mg deksibuprofenu). Dorośli. 
+         W chorobach reumatycznych 200–800 mg 3 ×/d. Przeciwbólowo 200–400 mg 4–6 ×/d. W bolesnych 
+         miesiączkach 400 mg 4 ×/d. Maks. dawka dobowa 3,2 g, jednak zwykle nie zaleca się stosowania
+         dawek >1,2 g/d. Dzieci. 3. mż.–12. rż. przeciwgorączkowo i przeciwbólowo maks. 
+         20–30 mg/kg mc./d w 3–4 daw. podz.; w młodzieńczym przewlekłym RZS 2.–15. rż. 20–40 mg/kg mc./d w 3–4 daw.
+         podz. Miejscowo u osób po 12. rż.: 4–10 cm kremu lub żelu nałożyć i wcierać w chorobowo 
+         zmienione miejsca; w przypadku dużych krwiaków i skręceń można stosować pod opatrunkiem okluzyjnym.
          */
 
         buttonCountIbuprem.setOnClickListener(new View.OnClickListener() {
@@ -96,40 +95,28 @@ public class IbuprofenActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 buttonCountIbuprem.setAnimation(shakeButtonAnimation);
-                String amountParacetamol7_12 = getResources().getString(R.string.amountParacetamol7_12);
-                String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
-                Toast.makeText(IbuprofenActivity.this, "Counting of drug amount in Progress...",
-                        Toast.LENGTH_LONG).show();
                 if (actualWeight == 0 || actualAge == 0) {
                     Toast.makeText(IbuprofenActivity.this, "Please add values greater than 0",
                             Toast.LENGTH_LONG).show();
                     return;
                 }
-                if (actualAge < 7) {
-                    amountOfIbuprofenMin = actualWeight * 10;
-                    amountOfIbuprofenMax = actualWeight * 15;
-                    amountOfDrugs = "Usually 10-15 mg/kg of weight.\nWhich means "
-                            + String.valueOf(amountOfIbuprofenMin) + "-"
-                            + String.valueOf(amountOfIbuprofenMax) + " for weight = "
-                            + String.valueOf(actualWeight) + "kg.";
-
-                } else if (actualAge >= 7 && actualAge <= 12) {
-                    //1/2 pills every 6-8 hour
-                    amountOfIbuprofenMin = 0.5 * 500 * 3;// ( 0.5 pill every 8 hours = 0.5 pill 3 times a day )
-                    amountOfIbuprofenMax = 0.5 * 500 * 4;// ( 0.5 pill every 6 hours = 0.5 pill 4 times a day )
-                    amountOfDrugs = amountParacetamol7_12;
-
+                //Dzieci. 3. mż.–12. rż. przeciwgorączkowo i przeciwbólowo maks.
+                //20–30 mg/kg mc./d w 3–4 daw. podz.;
+                if (actualAge < 13) {
+                    amountOfIbuprofenMin = actualWeight * 20;
+                    amountOfIbuprofenMax = actualWeight * 30;
+                    amountOfDrugs = "W 3-4 dawkach co 6-8 godzin";
+                    //Przeciwbólowo 200–400 mg 4–6 ×/d. W bolesnych
+                    // miesiączkach 400 mg 4 ×/d.
                 } else if (actualAge > 12) {
                     //1-2 pills 2-4 times a day , not often than 4 hours
-                    amountOfIbuprofenMin = 1 * 500 * 2;// ( 1 pill 2 times a day = )
-                    amountOfIbuprofenMax = 2 * 500 * 4;// (2 pills 4 times a day )
-                    amountOfDrugs = amountParacetamolAdult;
+                    amountOfIbuprofenMin = 200 * 4; // (Przeciwbólowo 200–400 mg 4–6 ×/d. W bolesnych  =200 *4
+                    amountOfIbuprofenMax = 400 * 6; // (Przeciwbólowo 200–400 mg 4–6 ×/d. W bolesnych  =400 *6
+                    amountOfDrugs = "W 4-6 dawkach co 4-6 godzin";
                 }
                 view.startAnimation(shakeButtonAnimation);
-                Toast.makeText(IbuprofenActivity.this, "Check details",
-                        Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(IbuprofenActivity.this, DosageDetailsIbuprofen.class);
-                myIntent.putExtra("ibuprofenAmount", amountOfDrugs);
+                myIntent.putExtra("ibuprofenDetails", amountOfDrugs);
                 myIntent.putExtra("amountOfIbuprofenMin", amountOfIbuprofenMin);
                 myIntent.putExtra("amountOfIbuprofenMax", amountOfIbuprofenMax);
                 startActivity(myIntent);

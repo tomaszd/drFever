@@ -61,6 +61,14 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/txtIbuprofenDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textAlignment="center" />
+
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="170dp"

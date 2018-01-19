@@ -20,7 +20,7 @@ public class DosageDetails extends AppCompatActivity {
         final EditText editMaxParacetamol = (EditText) findViewById(R.id.editMaxParacetamol);
         final EditText editMinParacetamol = (EditText) findViewById(R.id.editMinParacetamol);
         Intent myIntent = getIntent();
-        String paracetamolAmountValue = myIntent.getStringExtra("paracetamolAmount");
+        String dawkownaieValue = myIntent.getStringExtra("paracetamolAmount");
         Double amountOfParacetamolMinValue = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
         Double amountOfParacetamolMaxValue = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
         //dosageEditText.setText("Get : " + paracetamolAmountValue);
