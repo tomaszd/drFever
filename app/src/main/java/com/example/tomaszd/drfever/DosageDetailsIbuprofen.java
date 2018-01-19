@@ -18,14 +18,14 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         setContentView(R.layout.activity_dosage_details_ibuprofen);
         final EditText editMaxIbuprofen = (EditText) findViewById(R.id.editMaxIbuprofen);
         final EditText editMinIbuprofen = (EditText) findViewById(R.id.editMinIbuprofen);
-        final TextView txtibuprofenDetails = (TextView) findViewById(R.id.txtIbuprofenDetails);
+        final TextView txtIbuprofenDetails = (TextView) findViewById(R.id.txtIbuprofenDetails);
         Intent myIntent = getIntent();
-        String dosageIbuprofenDetails = myIntent.getStringExtra("ibuprofenDetails");
-        Double amountOfIbuprofenMinValue = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
-        Double amountOfIbuprofenMaxValue = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
-        editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMaxValue));
-        editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMinValue));
-        txtibuprofenDetails.setText(dosageIbuprofenDetails);
+        final String ibuprofenDetails = myIntent.getStringExtra("ibuprofenDetails");
+        final Double amountOfIbuprofenMin = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
+        final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
+        editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMax));
+        editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMin));
+        txtIbuprofenDetails.setText(ibuprofenDetails);
         //Pills
         Button buttonPill = (Button) findViewById(R.id.buttonPillIbuprofen);
         buttonPill.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +34,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
                 Toast.makeText(DosageDetailsIbuprofen.this, "Pills",
                         Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(DosageDetailsIbuprofen.this, PillDosageIbuprofenActivity.class);
-                DosageDetailsIbuprofen.this.startActivity(myIntent);
+                startNewDetailedActivityWithData(myIntent, ibuprofenDetails, amountOfIbuprofenMin, amountOfIbuprofenMax);
             }
         });
 
@@ -46,7 +46,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
                 Toast.makeText(DosageDetailsIbuprofen.this, "Sirop",
                         Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(DosageDetailsIbuprofen.this, SirupDosageIbuprofenActivity.class);
-                DosageDetailsIbuprofen.this.startActivity(myIntent);
+                startNewDetailedActivityWithData(myIntent, ibuprofenDetails, amountOfIbuprofenMin, amountOfIbuprofenMax);
             }
         });
         //czopki
@@ -57,8 +57,15 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
                 Toast.makeText(DosageDetailsIbuprofen.this, "Czopek",
                         Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(DosageDetailsIbuprofen.this, CzopekIbuprofenActivity.class);
-                DosageDetailsIbuprofen.this.startActivity(myIntent);
+                startNewDetailedActivityWithData(myIntent, ibuprofenDetails, amountOfIbuprofenMin, amountOfIbuprofenMax);
             }
         });
+    }
+
+    private void startNewDetailedActivityWithData(Intent myIntent, String ibuprofenDetails, Double amountOfIbuprofenMin, Double amountOfIbuprofenMax) {
+        myIntent.putExtra("ibuprofenDetails", ibuprofenDetails);
+        myIntent.putExtra("amountOfIbuprofenMin", amountOfIbuprofenMin);
+        myIntent.putExtra("amountOfIbuprofenMax", amountOfIbuprofenMax);
+        DosageDetailsIbuprofen.this.startActivity(myIntent);
     }
 }
