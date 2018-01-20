@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 
+import static java.lang.Math.round;
+
 public class CzopekIbuprofenActivity extends AppCompatActivity {
 
     @Override
@@ -30,11 +32,11 @@ public class CzopekIbuprofenActivity extends AppCompatActivity {
         final EditText max125 = (EditText) findViewById(R.id.editMaxCzopek125);
 
 
-        min60.setText(String.valueOf(amountOfIbuprofenMin / 60.0));
-        max60.setText(String.valueOf(amountOfIbuprofenMax / 60.0));
+        min60.setText(String.valueOf(round(100.0 * amountOfIbuprofenMin / 60.0) / 100.0));
+        max60.setText(String.valueOf(round(100.0 * amountOfIbuprofenMax / 60.0) / 100.0));
 
-        min125.setText(String.valueOf(amountOfIbuprofenMin / 125.0));
-        max125.setText(String.valueOf(amountOfIbuprofenMax / 125.0));
+        min125.setText(String.valueOf(round(100.0 * amountOfIbuprofenMin / 125.0) / 100.0));
+        max125.setText(String.valueOf(round(100.0 * amountOfIbuprofenMax / 125.0) / 100.0));
 
 
     }

@@ -36,11 +36,11 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editMaxIbuprofen"
+            android:id="@+id/editMinIbuprofen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MAX dawka (mg)"
+            android:text="Min dawka (mg)"
             android:textColor="@android:color/holo_green_light"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -116,7 +116,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editMinIbuprofen"
+            android:id="@+id/editMaxIbuprofen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
