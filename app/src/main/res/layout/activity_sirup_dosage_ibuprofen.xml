@@ -186,16 +186,22 @@
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/txtIbuprofenDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*Max dawka dobowa 3,2 g"
+        android:textColor="@android:color/black"
+        android:textStyle="italic" />
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
-
         <Button
             android:id="@+id/buttonSiropIbuprofen"
             android:layout_width="match_parent"
