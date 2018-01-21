@@ -3,6 +3,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/zigzags"
     android:orientation="vertical"
+    android:gravity="center_horizontal|center_vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
@@ -45,8 +46,8 @@
         android:layout_marginBottom="47dp"
         android:colorControlActivated="#e40c3f"
         android:colorControlNormal="#00b0ff"
-        android:max="50"
-        android:progress="20"
+        android:max="100"
+        android:progress="30"
         android:visibility="visible" />
 
     <LinearLayout
@@ -84,17 +85,16 @@
         android:layout_marginBottom="20dp"
         android:colorControlActivated="#e40c3f"
         android:colorControlNormal="#00b0ff"
-        android:max="50"
-        android:progress="5" />
+        android:max="100"
+        android:progress="30" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="260dp"
+        android:layout_width="250dp"
         android:layout_height="260dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="60dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical">
 
