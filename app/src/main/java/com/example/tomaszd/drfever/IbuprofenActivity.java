@@ -37,7 +37,7 @@ public class IbuprofenActivity extends AppCompatActivity {
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
                 actualAge = (progress * 20) / 100;
-                seekBarValue.setText(String.valueOf(actualAge) + " years");
+                seekBarValue.setText(String.valueOf(actualAge) + " lat");
             }
 
             @Override

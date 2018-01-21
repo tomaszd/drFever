@@ -99,8 +99,8 @@
         android:textStyle="bold|italic" />
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="250dp"
-        android:layout_height="260dp"
+        android:layout_width="220dp"
+        android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -110,9 +110,8 @@
             android:id="@+id/buttonCountIbuprofen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            android:layout_marginRight="14dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="5dp"
+
             android:background="@drawable/oblicz_transparent"
             android:textAllCaps="false"
             android:textSize="24sp"

@@ -24,7 +24,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editMaxIbuprofen"
+            android:id="@+id/editMinIbuprofen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -52,7 +52,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editMinIbuprofen"
+            android:id="@+id/editMaxIbuprofen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -69,11 +69,21 @@
         android:text="Details"
         android:textAlignment="center" />
 
+    <TextView
+        android:id="@+id/txtChooseTheWay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wybierz jak:"
+        android:textAlignment="center"
+        android:textColor="?attr/actionModeSplitBackground"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="150dp"
-        android:layout_height="400dp"
+        android:layout_width="130dp"
+        android:layout_height="360dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
