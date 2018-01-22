@@ -3,23 +3,41 @@
     android:layout_height="match_parent"
     android:background="@drawable/zigzags"
     android:orientation="vertical"
+    android:gravity="center_horizontal|center_vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="TABLETKI Ibuprofen"
         android:textAlignment="center"
         android:textColor="?attr/colorControlNormal"
-        android:textSize="36sp"
+        android:textSize="28sp"
         android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
+        <Button
+            android:id="@+id/buttonPillIbuprofen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/pill_button"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -88,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text=" 400 mg Max"
+            android:text="400 mg Max"
             android:textColor="@color/colorMinDosage"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -196,32 +214,10 @@
         android:id="@+id/txtIbuprofenDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="*Max dawka dobowa 3,2 g"
+        android:text="@string/max_daily_dosage_ibuprofen"
         android:textColor="@android:color/black"
         android:textStyle="italic" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonPillIbuprofen"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/pill_button"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-    </LinearLayout>
 
 </LinearLayout>

@@ -19,5 +19,6 @@
     <string name="select_drug">Select drug:</string>
     <string name="title_activity_obrazek">obrazek</string>
     <string name="syrop">SYROP Ibuprofen</string>
+    <string name="max_daily_dosage_ibuprofen">*Max dawka dobowa 3200 mg</string>
 
 </resources>
