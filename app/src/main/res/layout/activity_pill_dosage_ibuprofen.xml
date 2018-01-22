@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:text="TABLETKI Ibuprofen"
         android:textAlignment="center"
         android:textColor="?attr/colorControlNormal"
