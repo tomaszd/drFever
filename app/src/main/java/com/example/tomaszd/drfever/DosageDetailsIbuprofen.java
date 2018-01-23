@@ -31,8 +31,6 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         buttonPill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(DosageDetailsIbuprofen.this, "Pills",
-                        Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(DosageDetailsIbuprofen.this, PillDosageIbuprofenActivity.class);
                 startNewDetailedActivityWithData(myIntent, ibuprofenDetails, amountOfIbuprofenMin, amountOfIbuprofenMax);
             }
@@ -43,8 +41,6 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         buttonSyrop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(DosageDetailsIbuprofen.this, "Sirop",
-                        Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(DosageDetailsIbuprofen.this, SirupDosageIbuprofenActivity.class);
                 startNewDetailedActivityWithData(myIntent, ibuprofenDetails, amountOfIbuprofenMin, amountOfIbuprofenMax);
             }
@@ -54,8 +50,6 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         buttonCzopek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(DosageDetailsIbuprofen.this, "Czopek",
-                        Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(DosageDetailsIbuprofen.this, CzopekIbuprofenActivity.class);
                 startNewDetailedActivityWithData(myIntent, ibuprofenDetails, amountOfIbuprofenMin, amountOfIbuprofenMax);
             }
