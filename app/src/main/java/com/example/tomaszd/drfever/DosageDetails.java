@@ -77,7 +77,7 @@ public class DosageDetails extends AppCompatActivity {
     private void startNewDetailedActivityWithData(Intent myIntent, String dosageValue, Double amountOfParacetamolMin, Double amountOfParacetamolMax) {
         myIntent.putExtra("paracetamolDetails", dosageValue);
         myIntent.putExtra("amountOfParacetamolMin", amountOfParacetamolMin);
-        myIntent.putExtra("amountOfIbuprofenMax", amountOfParacetamolMax);
+        myIntent.putExtra("amountOfParacetamolMax", amountOfParacetamolMax);
         DosageDetails.this.startActivity(myIntent);
 
 
