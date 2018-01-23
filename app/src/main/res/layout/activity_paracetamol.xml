@@ -36,7 +36,7 @@
 
     <SeekBar
         android:id="@+id/seekBarWeight"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        style="@android:style/Widget.DeviceDefault.Light.SeekBar"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewAgeParacetamol"
@@ -76,7 +76,7 @@
 
     <SeekBar
         android:id="@+id/seekBarAge"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -111,9 +111,7 @@
             android:id="@+id/buttonCount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dp"
-            android:layout_marginRight="14dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/oblicz_transparent"
             android:textAllCaps="false"
             android:textSize="24sp"
