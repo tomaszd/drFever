@@ -39,7 +39,7 @@ public class AddNewUserActivity extends AppCompatActivity {
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
                 actualAge = (progress * 10) / 10;
-                textSelectAge.setText(String.valueOf(actualAge + " years"));
+                textSelectAge.setText(String.valueOf(actualAge + " lat"));
             }
 
             @Override

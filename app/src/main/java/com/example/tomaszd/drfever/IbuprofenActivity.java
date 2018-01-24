@@ -36,7 +36,7 @@ public class IbuprofenActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                actualAge = (progress * 20) / 100;
+                actualAge = progress;
                 seekBarValue.setText(String.valueOf(actualAge) + " lat");
             }
 
@@ -60,7 +60,7 @@ public class IbuprofenActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                actualWeight = (progress * 10) / 50;
+                actualWeight = progress;
                 seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
             }
 

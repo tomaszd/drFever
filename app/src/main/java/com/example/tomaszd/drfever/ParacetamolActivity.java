@@ -42,7 +42,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
                 actualAge = progress;
-                seekBarValue.setText(String.valueOf(actualAge) + " years");
+                seekBarValue.setText(String.valueOf(actualAge) + " lat");
             }
 
             @Override
