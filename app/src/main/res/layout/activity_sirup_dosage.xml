@@ -40,5 +40,11 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/txtIbuprofenDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/max_daily_dosage_paracetamol"
+        android:textColor="@android:color/black"
+        android:textStyle="italic" />
 </LinearLayout>

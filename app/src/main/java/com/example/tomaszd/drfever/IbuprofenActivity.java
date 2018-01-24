@@ -105,14 +105,14 @@ public class IbuprofenActivity extends AppCompatActivity {
                 if (actualAge < 13) {
                     amountOfIbuprofenMin = actualWeight * 20;
                     amountOfIbuprofenMax = actualWeight * 30;
-                    amountOfDrugs = "W 3-4 dawkach co 6-8 godzin";
+                    amountOfDrugs = "*W 3-4 dawkach co 6-8 godzin";
                     //Przeciwbólowo 200–400 mg 4–6 ×/d. W bolesnych
                     // miesiączkach 400 mg 4 ×/d.
                 } else if (actualAge > 12) {
                     //1-2 pills 2-4 times a day , not often than 4 hours
                     amountOfIbuprofenMin = 200 * 4; // (Przeciwbólowo 200–400 mg 4–6 ×/d. W bolesnych  =200 *4
                     amountOfIbuprofenMax = 400 * 6; // (Przeciwbólowo 200–400 mg 4–6 ×/d. W bolesnych  =400 *6
-                    amountOfDrugs = "W 4-6 dawkach co 4-6 godzin";
+                    amountOfDrugs = "*W 4-6 dawkach co 4-6 godzin";
                 }
                 view.startAnimation(shakeButtonAnimation);
                 Intent myIntent = new Intent(IbuprofenActivity.this, DosageDetailsIbuprofen.class);
