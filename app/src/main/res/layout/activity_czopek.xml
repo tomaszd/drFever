@@ -51,7 +51,6 @@
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:text="MIN Amount in (mg)"
-                android:textAlignment="textEnd"
                 android:textColor="@color/colorMinDosage"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -90,7 +89,6 @@
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:text="MAX Amount in (mg)"
-                android:textAlignment="textEnd"
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -129,6 +127,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Max dawka 50 mg"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editMax50Podac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PODAC"
             android:textAlignment="center"
             android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
@@ -172,6 +181,16 @@
             android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
             android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editMax80Podac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PODAC"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -206,6 +225,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Max dawka 125 mg"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editMax125Podac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PODAC"
             android:textAlignment="center"
             android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
@@ -248,6 +277,16 @@
             android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
             android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editMax150Podac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PODAC"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -282,6 +321,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Max dawka 180 mg"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editMax180Podac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PODAC"
             android:textAlignment="center"
             android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
@@ -324,6 +373,16 @@
             android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
             android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editMax250Podac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PODAC"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -358,6 +417,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Max dawka 500 mg"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editMax500Podac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PODAC"
             android:textAlignment="center"
             android:textColor="@android:color/holo_red_light"
             android:textSize="18sp"
