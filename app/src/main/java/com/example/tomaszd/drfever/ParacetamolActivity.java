@@ -41,7 +41,7 @@ public class ParacetamolActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                actualAge = (progress * 20) / 100;
+                actualAge = progress;
                 seekBarValue.setText(String.valueOf(actualAge) + " years");
             }
 
@@ -65,7 +65,7 @@ public class ParacetamolActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                actualWeight = (progress * 10) / 50;
+                actualWeight = progress;
                 seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
             }
 
@@ -103,8 +103,6 @@ public class ParacetamolActivity extends AppCompatActivity {
                 buttonCountParacetamol.setAnimation(shakeButtonAnimation);
                 String amountParacetamol7_12 = getResources().getString(R.string.amountParacetamol7_12);
                 String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
-                Toast.makeText(ParacetamolActivity.this, "Counting of drug amount in Progress...",
-                        Toast.LENGTH_LONG).show();
                 if (actualWeight == 0 || actualAge == 0) {
                     Toast.makeText(ParacetamolActivity.this, "Please add values greater than 0",
                             Toast.LENGTH_LONG).show();
