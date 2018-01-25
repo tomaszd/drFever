@@ -35,14 +35,17 @@ public class DosageDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dosage_details);
-        final EditText editMaxParacetamol = (EditText) findViewById(R.id.editMaxParacetamol);
-        final EditText editMinParacetamol = (EditText) findViewById(R.id.editMinParacetamol);
+        //final EditText editMaxParacetamol = (EditText) findViewById(R.id.editMaxParacetamol);
+        //final EditText editMinParacetamol = (EditText) findViewById(R.id.editMinParacetamol);
+        final Button buttonParacetamolDosageAmount = (Button) findViewById(R.id.buttonParacetamolDosageAmount);
         Intent myIntent = getIntent();
         final String dosageValue = myIntent.getStringExtra("paracetamolAmount");
         final Double amountOfParacetamolMin = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
-        editMinParacetamol.setText(String.valueOf(amountOfParacetamolMin));
-        editMaxParacetamol.setText(String.valueOf(amountOfParacetamolMax));
+        //editMinParacetamol.setText(String.valueOf(amountOfParacetamolMin));
+        //editMaxParacetamol.setText(String.valueOf(amountOfParacetamolMax));
+        buttonParacetamolDosageAmount.setText("          " + String.valueOf(amountOfParacetamolMax) + " ml");
+
         //Pills
         Button buttonPill = (Button) findViewById(R.id.buttonPill);
         buttonPill.setOnClickListener(new View.OnClickListener() {
