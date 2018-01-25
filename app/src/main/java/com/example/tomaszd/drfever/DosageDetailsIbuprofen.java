@@ -16,16 +16,18 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dosage_details_ibuprofen);
-        final EditText editMaxIbuprofen = (EditText) findViewById(R.id.editMaxIbuprofen);
-        final EditText editMinIbuprofen = (EditText) findViewById(R.id.editMinIbuprofen);
-        final TextView txtIbuprofenDetails = (TextView) findViewById(R.id.txtIbuprofenDetails);
+        //final EditText editMaxIbuprofen = (EditText) findViewById(R.id.editMaxIbuprofen);
+        //final EditText editMinIbuprofen = (EditText) findViewById(R.id.editMinIbuprofen);
+        //final TextView txtIbuprofenDetails = (TextView) findViewById(R.id.txtIbuprofenDetails);
         Intent myIntent = getIntent();
         final String ibuprofenDetails = myIntent.getStringExtra("ibuprofenDetails");
         final Double amountOfIbuprofenMin = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
-        editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMax));
-        editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMin));
-        txtIbuprofenDetails.setText(ibuprofenDetails);
+        final Button buttonIbuprofenDosageAmount = (Button) findViewById(R.id.buttonIbuprofenDosageAmount);
+        buttonIbuprofenDosageAmount.setText("        " + String.valueOf(amountOfIbuprofenMax) + " ml");
+        //editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMax));
+        //editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMin));
+        //txtIbuprofenDetails.setText(ibuprofenDetails);
         //Pills
         Button buttonPill = (Button) findViewById(R.id.buttonPillIbuprofen);
         buttonPill.setOnClickListener(new View.OnClickListener() {

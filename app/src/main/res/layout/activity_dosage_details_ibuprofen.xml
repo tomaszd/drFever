@@ -9,39 +9,31 @@
     android:paddingRight="16dp">
 
     <Button
-        android:id="@+id/buttonParacetamol"
+        android:id="@+id/buttonIbuprofen"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="0dp"
         android:layout_weight="1"
-        android:background="@drawable/button_paracetamol"
+        android:background="@drawable/button_ibuprofen"
         android:elevation="0dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
     <Button
-        android:id="@+id/buttonSelectHow"
+        android:id="@+id/buttonIbuprofenDosageAmount"
         android:layout_width="match_parent"
-        android:layout_height="12dp"
-        android:layout_margin="8dp"
-        android:layout_weight="1"
-        android:background="@drawable/button_select_drug"
-        android:elevation="0dp"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-    <Button
-        android:id="@+id/buttonParacetamolDosageAmount"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:layout_margin="0dp"
         android:layout_weight="1"
-        android:background="@drawable/button_paracetamol_bez"
+        android:background="@drawable/button_ibuprofen_bez"
         android:elevation="0dp"
         android:fontFamily="cursive"
+        android:text="      400 ml"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,7 +61,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:background="@drawable/syrop_parac" />
+            android:background="@drawable/syrop_ibu" />
 
         <Button
             android:id="@+id/buttonCzopekIbuprofen"
@@ -77,7 +69,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:background="@drawable/czopek_parac" />
+            android:background="@drawable/czopek_ibu" />
 
     </LinearLayout>
 
@@ -95,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/tabletka_parac"
+            android:background="@drawable/tabletka_ibu"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
     </LinearLayout>

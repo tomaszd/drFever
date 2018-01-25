@@ -44,10 +44,10 @@ public class DosageDetails extends AppCompatActivity {
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
         //editMinParacetamol.setText(String.valueOf(amountOfParacetamolMin));
         //editMaxParacetamol.setText(String.valueOf(amountOfParacetamolMax));
-        buttonParacetamolDosageAmount.setText("          " + String.valueOf(amountOfParacetamolMax) + " ml");
+        buttonParacetamolDosageAmount.setText("  " + String.valueOf(amountOfParacetamolMax) + " ml");
 
         //Pills
-        Button buttonPill = (Button) findViewById(R.id.buttonPill);
+        Button buttonPill = (Button) findViewById(R.id.buttonPillParacetamol);
         buttonPill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +58,7 @@ public class DosageDetails extends AppCompatActivity {
         });
 
         //syrop
-        Button buttonSyrop = (Button) findViewById(R.id.buttonSirop);
+        Button buttonSyrop = (Button) findViewById(R.id.buttonSiropParacetamol);
         buttonSyrop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,7 +68,7 @@ public class DosageDetails extends AppCompatActivity {
             }
         });
         //czopki
-        Button buttonCzopek = (Button) findViewById(R.id.buttonCzopek);
+        Button buttonCzopek = (Button) findViewById(R.id.buttonCzopekParacetamol);
         buttonCzopek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
