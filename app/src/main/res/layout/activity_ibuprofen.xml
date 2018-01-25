@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
 
-            android:background="@drawable/oblicz_transparent"
+            android:background="@drawable/oblicz_ibuprof"
             android:textAllCaps="false"
             android:textSize="24sp"
             android:textStyle="bold" />

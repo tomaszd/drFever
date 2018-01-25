@@ -110,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/oblicz_transparent"
+            android:background="@drawable/oblicz_paracet"
             android:textAllCaps="false"
             android:textSize="24sp"
             android:textStyle="bold" />
