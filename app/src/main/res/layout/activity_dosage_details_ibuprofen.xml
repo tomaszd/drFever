@@ -67,18 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Details"
-        android:textAlignment="viewStart" />
-
-    <TextView
-        android:id="@+id/txtChooseTheWay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Forma podania:"
-        android:textAlignment="center"
-        android:textColor="?attr/actionModeSplitBackground"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
+        />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -118,6 +107,10 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
     </LinearLayout>
+
+
+
+
 </LinearLayout>
 
 

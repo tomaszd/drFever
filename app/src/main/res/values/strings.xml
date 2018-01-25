@@ -21,5 +21,6 @@
     <string name="syrop">SYROP Ibuprofen</string>
     <string name="max_daily_dosage_ibuprofen">*Max dawka dobowa 1600 mg</string>
     <string name="max_daily_dosage_paracetamol">*Max dawka dobowa 4000 mg</string>
+    <string name="value_greater_than_0">Wybierz wiek i wage</string>
 
 </resources>

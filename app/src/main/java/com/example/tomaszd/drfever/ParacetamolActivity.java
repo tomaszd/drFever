@@ -104,7 +104,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 String amountParacetamol7_12 = getResources().getString(R.string.amountParacetamol7_12);
                 String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
                 if (actualWeight == 0 || actualAge == 0) {
-                    Toast.makeText(ParacetamolActivity.this, "Please add values greater than 0",
+                    Toast.makeText(ParacetamolActivity.this, R.string.value_greater_than_0,
                             Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -128,6 +128,12 @@ public class ParacetamolActivity extends AppCompatActivity {
                     amountOfParacetamolMax = 2 * 500 * 4;// (2 pills 4 times a day )
                     amountOfDrugs = amountParacetamolAdult;
                 }
+
+
+                //TODO wiser algorithm
+
+                amountOfParacetamolMax = actualWeight * 15;
+
 
                 //textCounted.setText(amountOfDrugs);
                 view.startAnimation(shakeButtonAnimation);

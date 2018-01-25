@@ -96,7 +96,7 @@ public class IbuprofenActivity extends AppCompatActivity {
 
                 buttonCountIbuprem.setAnimation(shakeButtonAnimation);
                 if (actualWeight == 0 || actualAge == 0) {
-                    Toast.makeText(IbuprofenActivity.this, "Please add values greater than 0",
+                    Toast.makeText(IbuprofenActivity.this, R.string.value_greater_than_0,
                             Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -114,6 +114,12 @@ public class IbuprofenActivity extends AppCompatActivity {
                     amountOfIbuprofenMax = 400 * 6; // (Przeciwbólowo 200–400 mg 4–6 ×/d. W bolesnych  =400 *6
                     amountOfDrugs = "*W 4-6 dawkach co 4-6 godzin";
                 }
+
+
+                //TODO wiser algorithm
+                amountOfIbuprofenMax = actualWeight * 10;
+
+
                 view.startAnimation(shakeButtonAnimation);
                 Intent myIntent = new Intent(IbuprofenActivity.this, DosageDetailsIbuprofen.class);
                 myIntent.putExtra("ibuprofenDetails", amountOfDrugs);
