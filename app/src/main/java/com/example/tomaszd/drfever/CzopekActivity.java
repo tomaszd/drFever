@@ -93,10 +93,10 @@ public class CzopekActivity extends AppCompatActivity {
         final EditText max180Podac = (EditText) findViewById(R.id.editMax180Podac);
         if (amountOfParacetamolMin <= 180 && 180 <= amountOfParacetamolMax) {
             max180Podac.setText("Podac");
-            max50Podac.setTextColor(Color.GREEN);
+            max180Podac.setTextColor(Color.GREEN);
         } else {
-            max50Podac.setText("Nie Podawac");
-            max50Podac.setTextColor(Color.RED);
+            max180Podac.setText("Nie Podawac");
+            max180Podac.setTextColor(Color.RED);
         }
         //250
         final EditText min250 = (EditText) findViewById(R.id.editMin250);
@@ -117,12 +117,12 @@ public class CzopekActivity extends AppCompatActivity {
         min500.setText(getDosageAmount(amountOfParacetamolMin, 500));
         max500.setText(getDosageAmount(amountOfParacetamolMax, 500));
         final EditText max500Podac = (EditText) findViewById(R.id.editMax50Podac);
-        if (amountOfParacetamolMin <= 250 && 250 <= amountOfParacetamolMax) {
-            max250Podac.setText("Podac");
-            max250Podac.setTextColor(Color.GREEN);
+        if (amountOfParacetamolMin <= 500 && 500 <= amountOfParacetamolMax) {
+            max500Podac.setText("Podac");
+            max500Podac.setTextColor(Color.GREEN);
         } else {
-            max250Podac.setText("Nie Podawac");
-            max250Podac.setTextColor(Color.RED);
+            max500Podac.setText("Nie Podawac");
+            max500Podac.setTextColor(Color.RED);
         }
     }
 
