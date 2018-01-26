@@ -24,7 +24,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         final Double amountOfIbuprofenMin = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
         final Button buttonIbuprofenDosageAmount = (Button) findViewById(R.id.buttonIbuprofenDosageAmount);
-        buttonIbuprofenDosageAmount.setText("        " + String.valueOf(amountOfIbuprofenMax) + " ml");
+        buttonIbuprofenDosageAmount.setText("        " + String.valueOf(amountOfIbuprofenMax) + " mg");
         //editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMax));
         //editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMin));
         //txtIbuprofenDetails.setText(ibuprofenDetails);
