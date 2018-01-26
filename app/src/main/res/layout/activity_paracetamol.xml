@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
@@ -17,8 +17,8 @@
             android:id="@+id/textViewWeightInKgParacetamol"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="@string/weight_in_kg"
+            android:layout_weight="2"
+            android:background="@drawable/button_waga_ribeye"
             android:textAlignment="center"
             android:textSize="28sp"
             android:fontFamily="cursive"
@@ -49,24 +49,27 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="47dp"
         android:progressDrawable="@drawable/custom_progress"
+        android:thumb="@drawable/slider"
         android:max="20"
         android:progress="4"
         android:visibility="visible" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textViewAgeOfChildParacetamol"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/age_of_child"
+
+
             android:textAlignment="center"
             android:textSize="28sp"
             android:fontFamily="cursive"
+            android:layout_weight="2"
+            android:background="@drawable/button_wiek_ribeye"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
             android:textColor="@android:color/background_light"
             android:textStyle="bold" />
@@ -93,6 +96,7 @@
         android:layout_centerVertical="true"
         android:layout_marginBottom="20dp"
         android:progressDrawable="@drawable/custom_progress"
+        android:thumb="@drawable/slider"
         android:max="20"
         android:progress="4" />
 
