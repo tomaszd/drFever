@@ -21,6 +21,9 @@
             android:text="@string/weight_in_kg"
             android:textAlignment="center"
             android:textSize="28sp"
+            android:fontFamily="cursive"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/background_light"
             android:textStyle="bold" />
 
         <TextView
@@ -31,6 +34,9 @@
             android:text="@string/weight"
             android:textAlignment="center"
             android:textSize="28sp"
+            android:fontFamily="cursive"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/background_light"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -60,6 +66,9 @@
             android:text="@string/age_of_child"
             android:textAlignment="center"
             android:textSize="28sp"
+            android:fontFamily="cursive"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/background_light"
             android:textStyle="bold" />
 
         <TextView
@@ -70,6 +79,9 @@
             android:text="@string/age"
             android:textAlignment="center"
             android:textSize="28sp"
+            android:fontFamily="cursive"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/background_light"
             android:textStyle="bold" />
     </LinearLayout>
 
