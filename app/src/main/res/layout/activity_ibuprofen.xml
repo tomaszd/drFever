@@ -17,7 +17,7 @@
             android:id="@+id/textViewWeightInKgIbuprofen"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:text="@string/weight_in_kg"
             android:textAlignment="center"
             android:textSize="28sp"
@@ -64,7 +64,7 @@
             android:id="@+id/textViewAgeOfChildIbuprofen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
 
             android:textAlignment="center"
             android:textSize="28sp"
