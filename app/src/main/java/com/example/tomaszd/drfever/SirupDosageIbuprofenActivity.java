@@ -26,7 +26,7 @@ public class SirupDosageIbuprofenActivity extends AppCompatActivity {
         //final Double amountOfIbuprofenMin = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
 
-        buttonIbuprofenDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfIbuprofenMax) + " ml"));
+        buttonIbuprofenDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfIbuprofenMax) + " mg"));
         buttonIbuprofenDosageSirupAmount.setText("Syrop");
 
         final Button buttonsirup_ibuprof_100_5 = (Button) findViewById(R.id.buttonsirup_ibuprof_100_5);
@@ -57,6 +57,6 @@ public class SirupDosageIbuprofenActivity extends AppCompatActivity {
 
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
-        return String.valueOf(round(100.0 * amountOfParacetamol * 5 / dosageinMl) / 100.0);
+        return "  " + String.valueOf(round(100.0 * amountOfParacetamol * 5 / dosageinMl) / 100.0) + " ml";
     }
 }
