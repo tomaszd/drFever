@@ -69,6 +69,7 @@
             android:textSize="28sp"
             android:fontFamily="cursive"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:background="@drawable/button_wiek_ribeye"
             android:textColor="@android:color/background_light"
             android:textStyle="bold" />
 
