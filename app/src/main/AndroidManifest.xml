@@ -18,17 +18,39 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ParacetamolActivity" />
-        <activity android:name=".AddNewUserActivity" />
-        <activity android:name=".DosageDetails" />
-        <activity android:name=".PillDosageActivity" />
-        <activity android:name=".SirupDosageActivity" />
-        <activity android:name=".CzopekActivity" />
-        <activity android:name=".IbuprofenActivity" />
-        <activity android:name=".DosageDetailsIbuprofen" />
-        <activity android:name=".PillDosageIbuprofenActivity" />
-        <activity android:name=".SirupDosageIbuprofenActivity" />
-        <activity android:name=".CzopekIbuprofenActivity"></activity>
+        <activity
+            android:name=".ParacetamolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddNewUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DosageDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PillDosageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SirupDosageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CzopekActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IbuprofenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DosageDetailsIbuprofen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PillDosageIbuprofenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SirupDosageIbuprofenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CzopekIbuprofenActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
