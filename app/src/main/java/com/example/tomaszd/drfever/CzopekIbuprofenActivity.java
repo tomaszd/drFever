@@ -2,6 +2,7 @@ package com.example.tomaszd.drfever;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 
@@ -39,6 +40,10 @@ public class CzopekIbuprofenActivity extends AppCompatActivity {
         max125.setText(String.valueOf(round(100.0 * amountOfIbuprofenMax / 125.0) / 100.0));
 
 
+    }
+    @NonNull
+    private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
+        return String.valueOf(round(10.0 * amountOfParacetamol / dosageinMl) / 10.0);
     }
 
 }

@@ -1,222 +1,106 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/zigzags"
-    android:orientation="vertical"
     android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:text="TABLETKI Ibuprofen"
-        android:textAlignment="center"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="28sp"
-        android:textStyle="bold" />
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+
         android:orientation="vertical">
 
         <Button
             android:id="@+id/buttonPillIbuprofen"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="2dp"
             android:layout_weight="1"
-            android:background="@drawable/pill_button"
+            android:background="@drawable/tabletka_ibu"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonIbuprofenDosageAmount"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_ibuprofen_bez"
+        android:elevation="0dp"
+        android:fontFamily="cursive"
+        android:text="      400 mg"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/buttonIbuprofenDosagePillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_ibuprofen_bez"
+        android:elevation="0dp"
+        android:fontFamily="cursive"
+        android:text="      400 ml"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
 
     </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-
+        android:layout_height="130dp"
+        android:layout_margin="0dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/lblMaxIbuprofenPill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/buttonPillIbuprofen200Forte"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:text="MIN dawka (mg)"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:background="@drawable/dawka_pill_ibu_200g" />
 
-        <EditText
-            android:id="@+id/editMinIbuprofenPill"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/buttonPillIbuprofen400Max"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="Min dawka (mg)"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:background="@drawable/dawka_pill_ibu_400g" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblMin100"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="200 mg Forte"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin200"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="MIN Amount in (mg)"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblMin200"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="400 mg Max"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin400"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="MIN Amount in (mg)"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblMinIbuprofenPill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="MAX dawka (mg)"
-
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMaxIbuprofenPill"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="MAX Amount in (mg)"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblMax100"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="200 mg Forte"
-
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax200"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="MAX Amount in (mg)"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lblMax200"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="400 mg Max"
-
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax400"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="MAX Amount in (mg)"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/txtIbuprofenDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/max_daily_dosage_ibuprofen"
-        android:textColor="@android:color/black"
-        android:textStyle="italic" />
-
+        android:text="Details" />
 
 
 </LinearLayout>
+
+
