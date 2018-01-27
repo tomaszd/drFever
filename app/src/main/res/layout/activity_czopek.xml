@@ -1,443 +1,167 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/zigzags"
     android:gravity="center_horizontal|center_vertical"
-
     android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp">
 
-    <TextView
-        android:id="@+id/textView2"
+
+    <Button
+        android:id="@+id/buttonParacetamolDosageAmount"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:text="CZOPEK Paracetamol"
-        android:textAlignment="center"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
+        android:layout_height="120dp"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_paracetamol_bez"
+        android:elevation="0dp"
+        android:fontFamily="cursive"
+        android:text="      400 mg"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:id="@+id/linearLayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/lblMin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:text="MIN dawka (mg)"
-                android:textAlignment="center"
-                android:textColor="@color/colorMinDosage"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editMin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:text="MIN Amount in (mg)"
-                android:textColor="@color/colorMinDosage"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
+        android:orientation="vertical">
 
         <Button
-            android:id="@+id/buttonCzopek2"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_weight="0"
-            android:background="@drawable/czopek_button" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            android:id="@+id/button_CzopekParacetamol"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/lblMax"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:text="MAX dawka (mg)"
-                android:textAlignment="center"
-                android:textColor="@android:color/holo_red_light"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/editMax"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:text="MAX Amount in (mg)"
-                android:textColor="@android:color/holo_red_light"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+            android:background="@drawable/czopek_parac"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_margin="0dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/lbl50"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Czopek 50 mg"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin50"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 50 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax50"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 50 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax50Podac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="PODAC"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        <Button
+            android:id="@+id/button_Czopek_parac_500"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
 
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:layout_weight="1"
+            android:background="@drawable/parac_500" />
 
-        <TextView
-            android:id="@+id/lbl80"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Czopek 80 mg"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        <Button
+            android:id="@+id/button_Czopek_parac_300"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
 
-        <EditText
-            android:id="@+id/editMin80"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 80 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editMax80"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Max dawka 80 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/editMax80Podac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:background="@drawable/parac_300" />
+
+        <Button
+            android:id="@+id/button_Czopek_parac_250"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+
             android:layout_weight="1"
-            android:text="PODAC"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:background="@drawable/parac_250" />
+
+        <Button
+            android:id="@+id/button_Czopek_parac_180"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+
+            android:layout_weight="1"
+            android:background="@drawable/parac_180" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_margin="0dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/lbl125"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/button_Czopek_parac_150"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Czopek 125 mg"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editMin125"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 125 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editMax125"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:background="@drawable/parac_150" />
+
+        <Button
+            android:id="@+id/button_Czopek_parac_125"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Max dawka 125 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/editMax125Podac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+
+            android:background="@drawable/parac_125" />
+
+        <Button
+            android:id="@+id/button_Czopek_parac_80"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="PODAC"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+
+
+            android:background="@drawable/parac_80" />
+
+        <Button
+            android:id="@+id/button_Czopek_parac_50"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+
+            android:background="@drawable/parac_50" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lbl150"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Czopek 150 mg"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin150"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 150 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax150"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 150 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/editMax150Podac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="PODAC"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lbl180"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Czopek 180 mg"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin180"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 180 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax180"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 180 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/editMax180Podac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="PODAC"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lbl250"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Czopek 250 mg"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin250"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 250 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax250"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 250 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/editMax250Podac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="PODAC"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lbl500"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Czopek 500 mg"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin500"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 500 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax500"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 500 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <EditText
-            android:id="@+id/editMax500Podac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="PODAC"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/buttonParacetamolDosageCzopekAmount"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_paracetamol_bez"
+        android:elevation="0dp"
+        android:fontFamily="cursive"
+        android:text="        400 ml"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
     <TextView
-        android:id="@+id/txtIbuprofenDetails"
+        android:id="@+id/txtParacetamolDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/max_daily_dosage_paracetamol"
+        android:text="*Wybierz najblizszy 100% wymaganej dawki"
         android:textColor="@android:color/black"
         android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"></LinearLayout>
+
+
 </LinearLayout>
+
+

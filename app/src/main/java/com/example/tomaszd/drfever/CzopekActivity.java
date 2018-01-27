@@ -1,133 +1,129 @@
 package com.example.tomaszd.drfever;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.EditText;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 
 import static java.lang.Math.round;
 
 public class CzopekActivity extends AppCompatActivity {
-    /**
-     * 50 mg, 80 mg, 125 mg, 150 mg, 180 mg, 250 mg, 300 mg
-     *
-     * @param savedInstanceState
-     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_czopek);
+        //Dostępne czopki z paracetamolem: 500, 300, 250, 180, 150, 125, 80, 50
 
+        final Button buttonParacetamolDosageAmount = (Button) findViewById(R.id.buttonParacetamolDosageAmount);
+        final Button buttonParacetamolDosageCzopekAmount = (Button) findViewById(R.id.buttonParacetamolDosageCzopekAmount);
+        final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
         Intent myIntent = getIntent();
-        final Double amountOfParacetamolMin = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
+        //final Double amountOfParacetamolMin = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
 
+        buttonParacetamolDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfParacetamolMax) + " mg"));
+        buttonParacetamolDosageCzopekAmount.setText("Wybierz czopek");
 
-        final EditText editMin = (EditText) findViewById(R.id.editMin);
-        final EditText editMax = (EditText) findViewById(R.id.editMax);
+        final Button button_Czopek_parac_500 = (Button) findViewById(R.id.button_Czopek_parac_500);
+        final Button button_Czopek_parac_300 = (Button) findViewById(R.id.button_Czopek_parac_300);
+        final Button button_Czopek_parac_250 = (Button) findViewById(R.id.button_Czopek_parac_250);
+        final Button button_Czopek_parac_180 = (Button) findViewById(R.id.button_Czopek_parac_180);
+        final Button button_Czopek_parac_150 = (Button) findViewById(R.id.button_Czopek_parac_150);
+        final Button button_Czopek_parac_125 = (Button) findViewById(R.id.button_Czopek_parac_125);
+        final Button button_Czopek_parac_80 = (Button) findViewById(R.id.button_Czopek_parac_80);
+        final Button button_Czopek_parac_50 = (Button) findViewById(R.id.button_Czopek_parac_50);
 
-        editMin.setText(String.valueOf(amountOfParacetamolMin));
-        editMax.setText(String.valueOf(amountOfParacetamolMax));
-        //50
-        final EditText min50 = (EditText) findViewById(R.id.editMin50);
-        final EditText max50 = (EditText) findViewById(R.id.editMax50);
 
+        button_Czopek_parac_500.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonParacetamolDosageCzopekAmount.setText(getDosageAmount(amountOfParacetamolMax, 500));
+                buttonParacetamolDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                button_Czopek_parac_500.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
 
-        min50.setText(getDosageAmount(amountOfParacetamolMin, 50));
-        max50.setText(getDosageAmount(amountOfParacetamolMax, 50));
-        final EditText max50Podac = (EditText) findViewById(R.id.editMax50Podac);
-        if (amountOfParacetamolMin <= 50 && 50 <= amountOfParacetamolMax) {
-            max50Podac.setText("Podac");
-            max50Podac.setTextColor(Color.GREEN);
-        } else {
-            max50Podac.setText("Nie Podawac");
-            max50Podac.setTextColor(Color.RED);
-        }
+            }
+        });
 
-        //80
-        final EditText min80 = (EditText) findViewById(R.id.editMin80);
-        final EditText max80 = (EditText) findViewById(R.id.editMax80);
-        final EditText max80Podac = (EditText) findViewById(R.id.editMax80Podac);
-        min80.setText(getDosageAmount(amountOfParacetamolMin, 80));
-        max80.setText(getDosageAmount(amountOfParacetamolMax, 80));
-        if (amountOfParacetamolMin <= 80 && 80 <= amountOfParacetamolMax) {
-            max80Podac.setText("Podac");
-            max80Podac.setTextColor(Color.GREEN);
-        } else {
-            max80Podac.setText("Nie Podawac");
-            max80Podac.setTextColor(Color.RED);
-        }
-        //125
-        final EditText min125 = (EditText) findViewById(R.id.editMin125);
-        final EditText max125 = (EditText) findViewById(R.id.editMax125);
-        min125.setText(getDosageAmount(amountOfParacetamolMin, 125));
-        max125.setText(getDosageAmount(amountOfParacetamolMax, 125));
-        final EditText max125Podac = (EditText) findViewById(R.id.editMax125Podac);
-        if (amountOfParacetamolMin <= 125 && 125 <= amountOfParacetamolMax) {
-            max125Podac.setText("Podac");
-            max125Podac.setTextColor(Color.GREEN);
-        } else {
-            max125Podac.setText("Nie Podawac");
-            max125Podac.setTextColor(Color.RED);
-        }
-        //150
-        final EditText min150 = (EditText) findViewById(R.id.editMin150);
-        final EditText max150 = (EditText) findViewById(R.id.editMax150);
-        min150.setText(getDosageAmount(amountOfParacetamolMin, 150));
-        max150.setText(getDosageAmount(amountOfParacetamolMax, 150));
-        final EditText max150Podac = (EditText) findViewById(R.id.editMax150Podac);
-        if (amountOfParacetamolMin <= 150 && 150 <= amountOfParacetamolMax) {
-            max150Podac.setText("Podac");
-            max150Podac.setTextColor(Color.GREEN);
-        } else {
-            max150Podac.setText("Nie Podawac");
-            max150Podac.setTextColor(Color.RED);
-        }
-        //180
-        final EditText min180 = (EditText) findViewById(R.id.editMin180);
-        final EditText max180 = (EditText) findViewById(R.id.editMax180);
-        min180.setText(getDosageAmount(amountOfParacetamolMin, 180));
-        max180.setText(getDosageAmount(amountOfParacetamolMax, 180));
-        final EditText max180Podac = (EditText) findViewById(R.id.editMax180Podac);
-        if (amountOfParacetamolMin <= 180 && 180 <= amountOfParacetamolMax) {
-            max180Podac.setText("Podac");
-            max180Podac.setTextColor(Color.GREEN);
-        } else {
-            max180Podac.setText("Nie Podawac");
-            max180Podac.setTextColor(Color.RED);
-        }
-        //250
-        final EditText min250 = (EditText) findViewById(R.id.editMin250);
-        final EditText max250 = (EditText) findViewById(R.id.editMax250);
-        min250.setText(getDosageAmount(amountOfParacetamolMin, 250));
-        max250.setText(getDosageAmount(amountOfParacetamolMax, 250));
-        final EditText max250Podac = (EditText) findViewById(R.id.editMax50Podac);
-        if (amountOfParacetamolMin <= 250 && 250 <= amountOfParacetamolMax) {
-            max250Podac.setText("Podac");
-            max250Podac.setTextColor(Color.GREEN);
-        } else {
-            max250Podac.setText("Nie Podawac");
-            max250Podac.setTextColor(Color.RED);
-        }
-        //500
-        final EditText min500 = (EditText) findViewById(R.id.editMin500);
-        final EditText max500 = (EditText) findViewById(R.id.editMax500);
-        min500.setText(getDosageAmount(amountOfParacetamolMin, 500));
-        max500.setText(getDosageAmount(amountOfParacetamolMax, 500));
-        final EditText max500Podac = (EditText) findViewById(R.id.editMax50Podac);
-        if (amountOfParacetamolMin <= 500 && 500 <= amountOfParacetamolMax) {
-            max500Podac.setText("Podac");
-            max500Podac.setTextColor(Color.GREEN);
-        } else {
-            max500Podac.setText("Nie Podawac");
-            max500Podac.setTextColor(Color.RED);
-        }
+        button_Czopek_parac_300.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonParacetamolDosageCzopekAmount.setText(getDosageAmount(amountOfParacetamolMax, 300));
+                buttonParacetamolDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                button_Czopek_parac_300.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
+
+            }
+        });
+
+        button_Czopek_parac_250.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonParacetamolDosageCzopekAmount.setText(getDosageAmount(amountOfParacetamolMax, 250));
+                buttonParacetamolDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                button_Czopek_parac_250.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
+
+            }
+        });
+
+        button_Czopek_parac_180.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonParacetamolDosageCzopekAmount.setText(getDosageAmount(amountOfParacetamolMax, 180));
+                buttonParacetamolDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                button_Czopek_parac_180.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
+
+            }
+        });
+        button_Czopek_parac_150.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonParacetamolDosageCzopekAmount.setText(getDosageAmount(amountOfParacetamolMax, 150));
+                buttonParacetamolDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                button_Czopek_parac_150.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
+
+            }
+        });
+        button_Czopek_parac_125.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonParacetamolDosageCzopekAmount.setText(getDosageAmount(amountOfParacetamolMax, 125));
+                buttonParacetamolDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                button_Czopek_parac_125.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
+            }
+        });
+        button_Czopek_parac_80.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonParacetamolDosageCzopekAmount.setText(getDosageAmount(amountOfParacetamolMax, 80));
+                buttonParacetamolDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                button_Czopek_parac_80.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
+            }
+        });
+        button_Czopek_parac_50.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonParacetamolDosageCzopekAmount.setText(getDosageAmount(amountOfParacetamolMax, 50));
+                buttonParacetamolDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                button_Czopek_parac_50.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
+            }
+        });
+
     }
 
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
-        return String.valueOf(round(10.0 * amountOfParacetamol / dosageinMl) / 10.0);
+        return "          " + String.valueOf(round((100.0 * amountOfParacetamol / dosageinMl) / 100.0) * 100.0) + " % dawki";
     }
 }
