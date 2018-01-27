@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal">
 
         <TextView
@@ -30,25 +30,24 @@
             android:id="@+id/textViewWeightInKgIbuprofenValue"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-
             android:layout_weight="1"
+            android:fontFamily="cursive"
             android:text="@string/weight"
             android:textAlignment="center"
-            android:textSize="28sp"
-            android:fontFamily="cursive"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
             android:textColor="@android:color/black"
+            android:textSize="36sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <SeekBar
         android:id="@+id/seekBarWeightIbuprofen"
         style="@android:style/Widget.DeviceDefault.SeekBar"
-        android:layout_width="344dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewAgeParacetamol"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="5dp"
         android:progressDrawable="@drawable/custom_progress_ibuprofen"
         android:thumb="@drawable/slider"
         android:max="20"
@@ -80,26 +79,26 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:fontFamily="cursive"
+            android:layout_marginTop="10dp"
             android:text="@string/age"
             android:textAlignment="center"
-            android:textSize="28sp"
-            android:fontFamily="cursive"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
             android:textColor="@android:color/black"
+            android:textSize="36sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <SeekBar
         android:id="@+id/seekBarAgeIbuprofen"
         style="@android:style/Widget.DeviceDefault.SeekBar"
-        android:layout_width="344dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="20dp"
-        android:progressDrawable="@drawable/custom_progress_ibuprofen"
-        android:thumb="@drawable/slider"
         android:max="20"
-        android:progress="4" />
+        android:progress="4"
+        android:progressDrawable="@drawable/custom_progress_ibuprofen"
+        android:thumb="@drawable/slider" />
 
     <TextView
         android:layout_width="match_parent"
@@ -109,13 +108,13 @@
         android:text="*Ibuprofen e.g.: \nNurofen, Ibum, Ibuprom ,Brufen, Mig"
         android:textAlignment="gravity"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="bold|italic" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="260dp"
-        android:layout_height="260dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -125,8 +124,7 @@
             android:id="@+id/buttonCountIbuprofen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-
+            android:layout_marginBottom="20dp"
             android:background="@drawable/oblicz_ibuprof"
             android:textAllCaps="false"
             android:textSize="24sp"
