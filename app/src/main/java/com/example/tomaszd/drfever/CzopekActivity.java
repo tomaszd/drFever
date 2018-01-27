@@ -27,7 +27,7 @@ public class CzopekActivity extends AppCompatActivity {
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
 
         buttonParacetamolDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfParacetamolMax) + " mg"));
-        buttonParacetamolDosageCzopekAmount.setText("Wybierz czopek");
+        buttonParacetamolDosageCzopekAmount.setText("         Wybierz czopek");
 
         final Button button_Czopek_parac_500 = (Button) findViewById(R.id.button_Czopek_parac_500);
         final Button button_Czopek_parac_300 = (Button) findViewById(R.id.button_Czopek_parac_300);
@@ -124,6 +124,6 @@ public class CzopekActivity extends AppCompatActivity {
 
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
-        return "          " + String.valueOf(round((100.0 * amountOfParacetamol / dosageinMl) / 100.0) * 100.0) + " % dawki";
+        return "          " + String.valueOf( (round(1000*(dosageinMl / amountOfParacetamol))/1000.0)*100) + " % dawki";
     }
 }
