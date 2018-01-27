@@ -89,7 +89,7 @@
         android:background="@drawable/button_ibuprofen_bez"
         android:elevation="0dp"
         android:fontFamily="cursive"
-        android:text="         Czopek"
+        android:text="          100 % dawki"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
@@ -100,7 +100,7 @@
         android:id="@+id/txtIbuprofenDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Details" />
+        android:text="Wybierz czopek o największej gramaturze mieszczącej się w tym zakresie." />
 
 
 </LinearLayout>
