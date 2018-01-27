@@ -42,7 +42,7 @@
 
     <SeekBar
         android:id="@+id/seekBarWeightIbuprofen"
-        style="@android:style/Widget.DeviceDefault.SeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewAgeParacetamol"
@@ -62,9 +62,7 @@
         <TextView
             android:id="@+id/textViewAgeOfChildIbuprofen"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-
-
+            android:layout_height="fill_parent"
             android:textAlignment="center"
             android:textSize="28sp"
             android:fontFamily="cursive"
@@ -91,7 +89,7 @@
 
     <SeekBar
         android:id="@+id/seekBarAgeIbuprofen"
-        style="@android:style/Widget.DeviceDefault.SeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -113,8 +111,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
