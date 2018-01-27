@@ -124,6 +124,6 @@ public class CzopekActivity extends AppCompatActivity {
 
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
-        return "          " + String.valueOf( (round(1000*(dosageinMl / amountOfParacetamol))/1000.0)*100) + " % dawki";
+        return "          " + String.valueOf(round((dosageinMl / amountOfParacetamol) * 10000) / 100.0) + " % dawki";
     }
 }
