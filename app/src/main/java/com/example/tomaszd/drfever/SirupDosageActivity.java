@@ -83,9 +83,7 @@ public class SirupDosageActivity extends AppCompatActivity {
 
             }
         });
-
     }
-
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
         return "        " + String.valueOf(round(100.0 * amountOfParacetamol * 5 / dosageinMl) / 100.0) + " ml";

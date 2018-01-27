@@ -5,8 +5,8 @@
     android:background="@drawable/zigzags"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
-    android:paddingLeft="0dp"
-    android:paddingRight="0dp">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
 
     <Button
@@ -27,8 +27,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -56,6 +56,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/sirup_parac_500_5" />
 
         <Button
@@ -63,13 +65,26 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/sirup_parac_250_5" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal">
+
+
 
         <Button
             android:id="@+id/buttonsirup_parac_200_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/sirup_parac_200_5" />
 
         <Button
@@ -77,10 +92,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/sirup_parac_120_5" />
 
     </LinearLayout>
-
     <Button
         android:id="@+id/buttonParacetamolDosageSirupAmount"
         android:layout_width="match_parent"
