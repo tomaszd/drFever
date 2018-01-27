@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/zigzags"
@@ -7,224 +8,124 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
 
-        android:text="TABLETKI PARACETAMOL"
-        android:textAlignment="center"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+    <Button
+        android:id="@+id/buttonParacetamolDosageAmount"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_paracetamol_bez"
+        android:elevation="0dp"
+        android:fontFamily="cursive"
+        android:text="      400 mg"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="330dp"
-        android:layout_height="110dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
 
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_pillParacetamol"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/tabletka_parac"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_margin="0dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/buttonPill"
+            android:id="@+id/button_pill_parac_1000"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/parac_1000" />
 
-            android:background="@drawable/pill_button"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
         <Button
-            android:id="@+id/buttonPill2"
+            android:id="@+id/button_pill_parac_500"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/parac_500" />
 
-            android:background="@drawable/pill_button"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal">
+
         <Button
-            android:id="@+id/buttonPill3"
+            android:id="@+id/button_pill_parac_300"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/parac_300" />
 
-            android:background="@drawable/pill_button"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+        <Button
+            android:id="@+id/button_pill_parac_250"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/parac_250" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonParacetamolDosagepillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_paracetamol_bez"
+        android:elevation="0dp"
+        android:fontFamily="cursive"
+        android:text="        400 ml"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lbl1000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tabletka 1000 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin1000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 1000 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax1000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 1000 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lbl500"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tabletka  500 mg "
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin500"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka  500 mg "
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax500"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 500 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lbl300"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tabletka  300 mg "
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin300"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 300 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax300"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 300 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/lbl250"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tabletka  250 mg "
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMin250"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Min dawka 250 mg"
-            android:textAlignment="center"
-            android:textColor="@color/colorMinDosage"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editMax250"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Max dawka 250 mg"
-            android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/txtIbuprofenDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/max_daily_dosage_paracetamol"
-        android:textColor="@android:color/black"
-        android:textStyle="italic" />
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"></LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txtParacetamolDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Details" />
 
 
 </LinearLayout>
+
+
