@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.EditText;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 
 import static java.lang.Math.round;
 
@@ -14,36 +17,47 @@ public class CzopekIbuprofenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_czopek_ibuprofen);
+        //Dostępne czopki z ibuprofenem: 60 mg, 125 mg
 
-
-        final EditText editMaxIbuprofen = (EditText) findViewById(R.id.editMaxIbuprofen);
-        final EditText editMinIbuprofen = (EditText) findViewById(R.id.editMinIbuprofen);
-
+        final Button buttonIbuprofenDosageAmount = (Button) findViewById(R.id.buttonIbuprofenDosageAmount);
+        final Button buttonIbuprofenDosageCzopekAmount = (Button) findViewById(R.id.buttonIbuprofenDosageCzopekAmount);
+        final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
         Intent myIntent = getIntent();
-        final Double amountOfIbuprofenMin = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
+        //final Double amountOfIbuprofenMin = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
 
-        editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMin));
-        editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMax));
+        buttonIbuprofenDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfIbuprofenMax) + " mg"));
+        buttonIbuprofenDosageCzopekAmount.setText("Wybierz czopek");
 
-        final EditText min60 = (EditText) findViewById(R.id.editMinCzopek60);
-        final EditText min125 = (EditText) findViewById(R.id.editMinCzopek125);
+        final Button buttonCzopekIbuprofen60 = (Button) findViewById(R.id.buttonCzopekIbuprofen60);
+        final Button buttonCzopekIbuprofenCzopek125 = (Button) findViewById(R.id.buttonCzopekIbuprofenCzopek125);
 
-        final EditText max60 = (EditText) findViewById(R.id.editMaxCzopek60);
-        final EditText max125 = (EditText) findViewById(R.id.editMaxCzopek125);
+        buttonCzopekIbuprofen60.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonIbuprofenDosageCzopekAmount.setText(getDosageAmount(amountOfIbuprofenMax, 60));
 
+                buttonIbuprofenDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                buttonCzopekIbuprofen60.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
 
-        min60.setText(String.valueOf(round(100.0 * amountOfIbuprofenMin / 60.0) / 100.0));
-        max60.setText(String.valueOf(round(100.0 * amountOfIbuprofenMax / 60.0) / 100.0));
+            }
+        });
 
-        min125.setText(String.valueOf(round(100.0 * amountOfIbuprofenMin / 125.0) / 100.0));
-        max125.setText(String.valueOf(round(100.0 * amountOfIbuprofenMax / 125.0) / 100.0));
+        buttonCzopekIbuprofenCzopek125.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonIbuprofenDosageCzopekAmount.setText(getDosageAmount(amountOfIbuprofenMax, 125));
 
-
+                buttonCzopekIbuprofenCzopek125.setAnimation(shakeButtonAnimation);
+                buttonIbuprofenDosageCzopekAmount.setAnimation(shakeButtonAnimation);
+                view.startAnimation(shakeButtonAnimation);
+            }
+        });
     }
+
     @NonNull
-    private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
-        return String.valueOf(round(10.0 * amountOfParacetamol / dosageinMl) / 10.0);
+    private String getDosageAmount(Double amountOfIbuprofen, int dosageinMl) {
+        return "" + String.valueOf(round((100.0 * amountOfIbuprofen / dosageinMl) / 100.0) * 100.0) + " % dawki";
     }
-
 }
