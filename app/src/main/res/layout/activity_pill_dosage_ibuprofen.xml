@@ -100,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Wybierz czopek o największej gramaturze mieszczącej się w tym zakresie."
-        android:textColor="black" />
+        android:textColor="@color/colorPrimaryDark" />
 </LinearLayout>
 
 
