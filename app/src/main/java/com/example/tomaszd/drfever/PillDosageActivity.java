@@ -78,10 +78,10 @@ public class PillDosageActivity extends AppCompatActivity {
                 buttonParacetamolDosagePillAmount.setAnimation(shakeButtonAnimation);
                 button_pill_parac_250.setAnimation(shakeButtonAnimation);
                 view.startAnimation(shakeButtonAnimation);
-
             }
         });
     }
+
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
         return "        " + String.valueOf(round(100.0 * amountOfParacetamol / dosageinMl) / 100.0) + " tabletki";
