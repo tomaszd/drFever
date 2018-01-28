@@ -48,10 +48,10 @@
         android:layout_above="@+id/textViewAgeParacetamol"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"
-        android:progressDrawable="@drawable/custom_progress_ibuprofen"
-        android:thumb="@drawable/slider"
         android:max="20"
         android:progress="4"
+        android:progressDrawable="@drawable/custom_progress_ibuprofen"
+        android:thumb="@drawable/slider"
         android:visibility="visible" />
 
     <LinearLayout
@@ -103,16 +103,17 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="*Ibuprofen e.g.: \nNurofen, Ibum, Ibuprom ,Brufen, Mig"
+        android:fontFamily="casual"
+        android:text="*Ibuprofen moze miec rozne nazwy n.p.: \nNurofen, Ibum, Ibuprom, Brufen, Mig"
         android:textAlignment="gravity"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="italic" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="220dp"
-        android:layout_height="220dp"
+        android:layout_height="230dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"

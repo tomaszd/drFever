@@ -106,7 +106,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="*Paracetamol e.g.:\nApap, Panadol, Calpol, Eferalgan"
+        android:fontFamily="casual"
+        android:text="*Paracetamol moze miec rozne nazwy :\nApap, Panadol, Calpol, Eferalgan"
         android:textAlignment="gravity"
         android:textColor="@android:color/black"
         android:textSize="15sp"
@@ -115,7 +116,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="220dp"
-        android:layout_height="220dp"
+        android:layout_height="230dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
