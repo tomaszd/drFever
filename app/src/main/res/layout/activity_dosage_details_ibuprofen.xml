@@ -24,15 +24,15 @@
         android:layout_height="60dp"
         android:layout_margin="0dp"
         android:layout_weight="1"
-        android:background="@drawable/button_ibuprofen_bez"
+        android:background="@drawable/button_bez"
         android:elevation="0dp"
-        android:text="      400 ml"
-        android:textAllCaps="false"
         android:fontFamily="cursive"
+        android:text=" 400 ml"
+        android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="fill_parent"
