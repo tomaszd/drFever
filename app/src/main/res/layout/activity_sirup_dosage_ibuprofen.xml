@@ -68,6 +68,7 @@
             android:background="@drawable/sirup_ibuprof_200_5" />
 
     </LinearLayout>
+
     <Button
         android:id="@+id/buttonIbuprofenDosageSirupAmount"
         android:layout_width="match_parent"
@@ -77,7 +78,7 @@
         android:background="@drawable/button_ibuprofen_bez"
         android:elevation="0dp"
         android:fontFamily="cursive"
-        android:text="        400 ml"
+        android:text="          Wybierz Syrop"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
@@ -92,11 +93,6 @@
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/txtIbuprofenDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Details" />
 
 
 </LinearLayout>

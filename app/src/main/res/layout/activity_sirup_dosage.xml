@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="0dp"
-        android:layout_weight="1"
+        android:layout_weight="5"
         android:background="@drawable/button_paracetamol_bez"
         android:elevation="0dp"
         android:fontFamily="cursive"
@@ -47,7 +47,7 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:layout_margin="0dp"
         android:orientation="horizontal">
 
@@ -55,9 +55,9 @@
             android:id="@+id/buttonsirup_parac_500_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_weight="1"
             android:background="@drawable/sirup_parac_500_5" />
 
         <Button
@@ -72,7 +72,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:layout_margin="0dp"
         android:orientation="horizontal">
 
@@ -102,11 +102,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="0dp"
-        android:layout_weight="1"
+        android:layout_weight="5"
         android:background="@drawable/button_paracetamol_bez"
         android:elevation="0dp"
         android:fontFamily="cursive"
-        android:text="        400 ml"
+        android:text="          Wybierz Syrop"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
@@ -120,11 +120,7 @@
         android:orientation="horizontal"></LinearLayout>
 
 
-    <TextView
-        android:id="@+id/txtParacetamolDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Details" />
+
 
 
 </LinearLayout>

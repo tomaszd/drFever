@@ -88,19 +88,14 @@
         android:background="@drawable/button_ibuprofen_bez"
         android:elevation="0dp"
         android:fontFamily="cursive"
-        android:text="      400 ml"
+        android:text="          Ile tabletek"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
-    <TextView
-        android:id="@+id/txtIbuprofenDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Wybierz czopek o największej gramaturze mieszczącej się w tym zakresie."
-        android:textColor="@color/colorPrimaryDark" />
+
 </LinearLayout>
 
 
