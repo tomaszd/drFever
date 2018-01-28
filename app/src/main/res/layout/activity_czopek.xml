@@ -15,7 +15,7 @@
         android:layout_height="120dp"
         android:layout_margin="0dp"
         android:layout_weight="1"
-        android:background="@drawable/button_paracetamol_bez"
+        android:background="@drawable/wst_parac_czopek"
         android:elevation="0dp"
         android:fontFamily="cursive"
         android:text="      400 mg"
@@ -26,28 +26,8 @@
         android:textStyle="bold|italic" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/button_CzopekParacetamol"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/czopek_parac"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="80dp"
+        android:layout_height="120dp"
         android:layout_margin="0dp"
         android:orientation="horizontal">
 
@@ -90,7 +70,7 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="80dp"
+        android:layout_height="120dp"
         android:layout_margin="0dp"
         android:orientation="horizontal">
 
@@ -140,20 +120,12 @@
         android:background="@drawable/button_paracetamol_bez"
         android:elevation="0dp"
         android:fontFamily="cursive"
-        android:text="          100 % Dawki"
+        android:text="          Wybierz Czopek"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
-
-    <TextView
-        android:id="@+id/txtParacetamolDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="*Wybierz najblizszy 100% wymaganej dawki"
-        android:textColor="@android:color/black"
-        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"

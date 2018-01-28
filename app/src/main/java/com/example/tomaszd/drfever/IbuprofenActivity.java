@@ -95,7 +95,7 @@ public class IbuprofenActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 buttonCountIbuprem.setAnimation(shakeButtonAnimation);
-                if (actualWeight == 0 || actualAge == 0) {
+                if (actualWeight == 0) {
                     Toast.makeText(IbuprofenActivity.this, R.string.value_greater_than_0,
                             Toast.LENGTH_LONG).show();
                     return;

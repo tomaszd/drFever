@@ -9,14 +9,13 @@
     android:paddingRight="16dp">
 
 
-
     <Button
         android:id="@+id/buttonIbuprofenDosageAmount"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="0dp"
         android:layout_weight="1"
-        android:background="@drawable/button_ibuprofen_bez"
+        android:background="@drawable/wst_ibu_syr"
         android:elevation="0dp"
         android:fontFamily="cursive"
         android:text="      400 mg"
@@ -25,25 +24,7 @@
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
 
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/buttonPillIbuprofen"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/syrop_ibu"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-    </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="130dp"
@@ -89,10 +70,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:orientation="vertical">
+
     </LinearLayout>
-
-
 
 
 </LinearLayout>
