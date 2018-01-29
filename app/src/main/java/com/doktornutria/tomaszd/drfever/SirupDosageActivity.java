@@ -28,7 +28,7 @@ public class SirupDosageActivity extends AppCompatActivity {
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
 
         buttonParacetamolDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfParacetamolMax) + " mg"));
-        buttonParacetamolDosageSirupAmount.setText("Syrop");
+        buttonParacetamolDosageSirupAmount.setText("          Wybierz syrop");
 
         final Button buttonsirup_parac_500_5 = (Button) findViewById(R.id.buttonsirup_parac_500_5);
         final Button buttonsirup_parac_250_5 = (Button) findViewById(R.id.buttonsirup_parac_250_5);

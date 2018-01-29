@@ -27,7 +27,7 @@ public class CzopekIbuprofenActivity extends AppCompatActivity {
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
 
         buttonIbuprofenDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfIbuprofenMax) + " mg"));
-        buttonIbuprofenDosageCzopekAmount.setText("Wybierz czopek");
+        buttonIbuprofenDosageCzopekAmount.setText("          Wybierz czopek");
 
         final Button buttonCzopekIbuprofen60 = (Button) findViewById(R.id.buttonCzopekIbuprofen60);
         final Button buttonCzopekIbuprofenCzopek125 = (Button) findViewById(R.id.buttonCzopekIbuprofenCzopek125);

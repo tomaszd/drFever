@@ -27,7 +27,7 @@ public class PillDosageActivity extends AppCompatActivity {
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
 
         buttonParacetamolDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfParacetamolMax) + " mg"));
-        buttonParacetamolDosagePillAmount.setText("Tabletka");
+        buttonParacetamolDosagePillAmount.setText("          Wybierz dawke");
 
         final Button button_pill_parac_1000 = (Button) findViewById(R.id.button_pill_parac_1000);
         final Button button_pill_parac_500 = (Button) findViewById(R.id.button_pill_parac_500);

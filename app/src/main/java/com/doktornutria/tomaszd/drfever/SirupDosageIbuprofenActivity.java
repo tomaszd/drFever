@@ -27,7 +27,7 @@ public class SirupDosageIbuprofenActivity extends AppCompatActivity {
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
 
         buttonIbuprofenDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfIbuprofenMax) + " mg"));
-        buttonIbuprofenDosageSirupAmount.setText("Syrop");
+        buttonIbuprofenDosageSirupAmount.setText("          Wybierz syrop");
 
         final Button buttonsirup_ibuprof_100_5 = (Button) findViewById(R.id.buttonsirup_ibuprof_100_5);
         final Button buttonsirup_ibuprof_200_5 = (Button) findViewById(R.id.buttonsirup_ibuprof_200_5);

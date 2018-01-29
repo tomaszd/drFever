@@ -27,7 +27,7 @@ public class PillDosageIbuprofenActivity extends AppCompatActivity {
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
 
         buttonIbuprofenDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfIbuprofenMax) + " mg"));
-        buttonIbuprofenDosagePillAmount.setText("Wcisnij dawke tabletki");
+        buttonIbuprofenDosagePillAmount.setText("           Wybierz dawke");
 
         final Button buttonPillIbuprofen200Forte = (Button) findViewById(R.id.buttonPillIbuprofen200Forte);
         final Button buttonPillIbuprofen400Max = (Button) findViewById(R.id.buttonPillIbuprofen400Max);
