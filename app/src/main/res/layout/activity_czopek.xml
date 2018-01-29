@@ -32,40 +32,33 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button_Czopek_parac_500"
+            android:id="@+id/button_Czopek_parac_50"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-
-
             android:layout_weight="1"
-            android:background="@drawable/parac_500" />
+            android:background="@drawable/parac_50" />
 
         <Button
-            android:id="@+id/button_Czopek_parac_300"
+            android:id="@+id/button_Czopek_parac_80"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-
-
             android:layout_weight="1"
-            android:background="@drawable/parac_300" />
+            android:background="@drawable/parac_80" />
 
         <Button
-            android:id="@+id/button_Czopek_parac_250"
+            android:id="@+id/button_Czopek_parac_125"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-
-
             android:layout_weight="1"
-            android:background="@drawable/parac_250" />
+            android:background="@drawable/parac_125" />
 
         <Button
-            android:id="@+id/button_Czopek_parac_180"
+            android:id="@+id/button_Czopek_parac_150"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-
-
             android:layout_weight="1"
-            android:background="@drawable/parac_180" />
+            android:background="@drawable/parac_150" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -74,41 +67,36 @@
         android:layout_margin="0dp"
         android:orientation="horizontal">
 
+
         <Button
-            android:id="@+id/button_Czopek_parac_150"
+            android:id="@+id/button_Czopek_parac_180"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
-
-            android:background="@drawable/parac_150" />
+            android:background="@drawable/parac_180" />
 
         <Button
-            android:id="@+id/button_Czopek_parac_125"
+            android:id="@+id/button_Czopek_parac_250"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
-
-            android:background="@drawable/parac_125" />
+            android:background="@drawable/parac_250" />
 
         <Button
-            android:id="@+id/button_Czopek_parac_80"
+            android:id="@+id/button_Czopek_parac_300"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
-
-            android:background="@drawable/parac_80" />
+            android:background="@drawable/parac_300" />
 
         <Button
-            android:id="@+id/button_Czopek_parac_50"
+            android:id="@+id/button_Czopek_parac_500"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/parac_500" />
 
 
-            android:background="@drawable/parac_50" />
     </LinearLayout>
 
     <Button
