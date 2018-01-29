@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal|center_vertical"
     tools:background="@drawable/zigzags"
-    tools:context="com.example.tomaszd.drfever.SelectDrugActivity">
+    tools:context="com.doktornutria.tomaszd.drfever.SelectDrugActivity">
 
 
 

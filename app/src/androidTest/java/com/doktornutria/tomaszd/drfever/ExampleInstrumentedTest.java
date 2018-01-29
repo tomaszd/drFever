@@ -1,4 +1,4 @@
-package com.example.tomaszd.drfever;
+package com.doktornutria.tomaszd.drfever;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.tomaszd.drfever", appContext.getPackageName());
+        assertEquals("com.doktornutria.tomaszd.doktornutria", appContext.getPackageName());
     }
 }

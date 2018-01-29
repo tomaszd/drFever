@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tomaszd.drfever">
+    package="com.doktornutria.tomaszd.drfever">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SelectDrugActivity"
+            android:name="com.doktornutria.tomaszd.drfever.SelectDrugActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,37 +19,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ParacetamolActivity"
+            android:name="com.doktornutria.tomaszd.drfever.ParacetamolActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AddNewUserActivity"
+            android:name="com.doktornutria.tomaszd.drfever.AddNewUserActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DosageDetails"
+            android:name="com.doktornutria.tomaszd.drfever.DosageDetails"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PillDosageActivity"
+            android:name="com.doktornutria.tomaszd.drfever.PillDosageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SirupDosageActivity"
+            android:name="com.doktornutria.tomaszd.drfever.SirupDosageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".CzopekActivity"
+            android:name="com.doktornutria.tomaszd.drfever.CzopekActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".IbuprofenActivity"
+            android:name="com.doktornutria.tomaszd.drfever.IbuprofenActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DosageDetailsIbuprofen"
+            android:name="com.doktornutria.tomaszd.drfever.DosageDetailsIbuprofen"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".PillDosageIbuprofenActivity"
+            android:name="com.doktornutria.tomaszd.drfever.PillDosageIbuprofenActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SirupDosageIbuprofenActivity"
+            android:name="com.doktornutria.tomaszd.drfever.SirupDosageIbuprofenActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".CzopekIbuprofenActivity"
+            android:name="com.doktornutria.tomaszd.drfever.CzopekIbuprofenActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.tomaszd.drfever;
+package com.doktornutria.tomaszd.drfever;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
