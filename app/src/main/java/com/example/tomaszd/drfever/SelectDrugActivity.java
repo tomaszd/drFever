@@ -13,6 +13,16 @@ public class SelectDrugActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select_drug);
+        Button buttonIbuprofen = (Button) findViewById(R.id.buttonIbuprofen);
+        buttonIbuprofen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SelectDrugActivity.this, "Ibuprofen",
+                        Toast.LENGTH_LONG).show();
+                Intent myIntent = new Intent(SelectDrugActivity.this, IbuprofenActivity.class);
+                SelectDrugActivity.this.startActivity(myIntent);
+            }
+        });
 
         Button buttonParacetamol = (Button) findViewById(R.id.buttonParacetamol);
         buttonParacetamol.setOnClickListener(new View.OnClickListener() {
@@ -25,15 +35,6 @@ public class SelectDrugActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonIbuprofen = (Button) findViewById(R.id.buttonIbuprofen);
-        buttonIbuprofen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(SelectDrugActivity.this, "Ibuprofen",
-                        Toast.LENGTH_LONG).show();
-                Intent myIntent = new Intent(SelectDrugActivity.this, IbuprofenActivity.class);
-                SelectDrugActivity.this.startActivity(myIntent);
-            }
-        });
+
     }
 }

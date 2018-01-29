@@ -1,9 +1,7 @@
 package com.example.tomaszd.drfever;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -26,14 +24,12 @@ public class ParacetamolActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paracetamol);
 
-        //final TextView textCounted = (TextView) findViewById(R.id.editTextCounted);
+
         final SeekBar seekBarAge = (SeekBar) findViewById(R.id.seekBarAge);
         final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeParacetamol);
-        // final Button buttonLoadData = (Button) findViewById(R.id.loadUser);
-        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
         final Button buttonCountParacetamol = (Button) findViewById(R.id.buttonCount);
-        //final Button buttonSeeDosageDetails = (Button) findViewById(R.id.seeDosageDetails);
+
 
         seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -43,6 +39,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 actualAge = progress;
                 seekBarValue.setText(String.valueOf(actualAge) + " lat");
+                buttonCountParacetamol.setAnimation(shakeButtonAnimation);
             }
 
             @Override
@@ -65,6 +62,7 @@ public class ParacetamolActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
+                buttonCountParacetamol.setAnimation(shakeButtonAnimation);
                 actualWeight = progress;
                 seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
             }
@@ -136,7 +134,7 @@ public class ParacetamolActivity extends AppCompatActivity {
 
 
                 //textCounted.setText(amountOfDrugs);
-                view.startAnimation(shakeButtonAnimation);
+                //view.startAnimation(shakeButtonAnimation);
                 Intent myIntent = new Intent(ParacetamolActivity.this, DosageDetails.class);
                 myIntent.putExtra("paracetamolAmount", amountOfDrugs);
                 myIntent.putExtra("amountOfParacetamolMin", amountOfParacetamolMin);

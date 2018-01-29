@@ -38,6 +38,7 @@ public class IbuprofenActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 actualAge = progress;
                 seekBarValue.setText(String.valueOf(actualAge) + " lat");
+                buttonCountIbuprem.setAnimation(shakeButtonAnimation);
             }
 
             @Override
@@ -62,6 +63,7 @@ public class IbuprofenActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 actualWeight = progress;
                 seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
+                buttonCountIbuprem.setAnimation(shakeButtonAnimation);
             }
 
             @Override
@@ -120,7 +122,7 @@ public class IbuprofenActivity extends AppCompatActivity {
                 amountOfIbuprofenMax = actualWeight * 10;
 
 
-                view.startAnimation(shakeButtonAnimation);
+                //view.startAnimation(shakeButtonAnimation);
                 Intent myIntent = new Intent(IbuprofenActivity.this, DosageDetailsIbuprofen.class);
                 myIntent.putExtra("ibuprofenDetails", amountOfDrugs);
                 myIntent.putExtra("amountOfIbuprofenMin", amountOfIbuprofenMin);

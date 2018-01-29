@@ -25,6 +25,7 @@ public class PillDosageActivity extends AppCompatActivity {
         Intent myIntent = getIntent();
         //final Double amountOfParacetamolMin = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
+
         buttonParacetamolDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfParacetamolMax) + " mg"));
         buttonParacetamolDosagePillAmount.setText("Tabletka");
 
@@ -84,6 +85,6 @@ public class PillDosageActivity extends AppCompatActivity {
 
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
-        return "        " + String.valueOf(round(100.0 * amountOfParacetamol / dosageinMl) / 100.0) + " tabletki";
+        return String.valueOf(round(100.0 * amountOfParacetamol / dosageinMl) / 100.0);
     }
 }

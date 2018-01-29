@@ -7,10 +7,56 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewAgeOfChildIbuprofen"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:fontFamily="cursive"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:layout_weight="2"
+            android:background="@drawable/button_wiek_ribeye"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewAgeIbupremValue"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:fontFamily="cursive"
+            android:layout_marginTop="10dp"
+            android:text="@string/age"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarAgeIbuprofen"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:max="20"
+        android:progress="4"
+        android:progressDrawable="@drawable/custom_progress_ibuprofen"
+        android:thumb="@drawable/slider" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
         android:orientation="horizontal">
 
         <TextView
@@ -53,51 +99,6 @@
         android:progressDrawable="@drawable/custom_progress_ibuprofen"
         android:thumb="@drawable/slider"
         android:visibility="visible" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textViewAgeOfChildIbuprofen"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:textAlignment="center"
-            android:textSize="28sp"
-            android:fontFamily="cursive"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-            android:layout_weight="2"
-            android:background="@drawable/button_wiek_ribeye"
-            android:textColor="@android:color/background_light"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textViewAgeIbupremValue"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:fontFamily="cursive"
-            android:layout_marginTop="10dp"
-            android:text="@string/age"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-            android:textColor="@android:color/black"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <SeekBar
-        android:id="@+id/seekBarAgeIbuprofen"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:max="20"
-        android:progress="4"
-        android:progressDrawable="@drawable/custom_progress_ibuprofen"
-        android:thumb="@drawable/slider" />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

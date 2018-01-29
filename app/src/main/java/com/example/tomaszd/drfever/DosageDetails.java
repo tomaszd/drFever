@@ -39,13 +39,14 @@ public class DosageDetails extends AppCompatActivity {
         //final EditText editMinParacetamol = (EditText) findViewById(R.id.editMinParacetamol);
         Intent myIntent = getIntent();
 
-        final Button buttonParacetamolDosageAmount = (Button) findViewById(R.id.buttonParacetamolDosageAmount);
+
         final String dosageValue = myIntent.getStringExtra("paracetamolAmount");
         final Double amountOfParacetamolMin = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
+        final Button buttonParacetamolDosageAmount = (Button) findViewById(R.id.buttonParacetamolDosageAmount);
         //editMinParacetamol.setText(String.valueOf(amountOfParacetamolMin));
         //editMaxParacetamol.setText(String.valueOf(amountOfParacetamolMax));
-        buttonParacetamolDosageAmount.setText("  " + String.valueOf(amountOfParacetamolMax) + " ml");
+        buttonParacetamolDosageAmount.setText("  " + String.valueOf(amountOfParacetamolMax) + " mg");
 
         //Pills
         Button buttonPill = (Button) findViewById(R.id.buttonPillParacetamol);
@@ -53,7 +54,6 @@ public class DosageDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(DosageDetails.this, PillDosageActivity.class);
-                DosageDetails.this.startActivity(myIntent);
                 startNewDetailedActivityWithData(myIntent, dosageValue, amountOfParacetamolMin, amountOfParacetamolMax);
             }
         });
@@ -64,7 +64,6 @@ public class DosageDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(DosageDetails.this, SirupDosageActivity.class);
-                DosageDetails.this.startActivity(myIntent);
                 startNewDetailedActivityWithData(myIntent, dosageValue, amountOfParacetamolMin, amountOfParacetamolMax);
             }
         });
@@ -74,7 +73,6 @@ public class DosageDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(DosageDetails.this, CzopekActivity.class);
-                DosageDetails.this.startActivity(myIntent);
                 startNewDetailedActivityWithData(myIntent, dosageValue, amountOfParacetamolMin, amountOfParacetamolMax);
             }
         });

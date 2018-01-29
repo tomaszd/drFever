@@ -59,4 +59,5 @@ public class PillDosageIbuprofenActivity extends AppCompatActivity {
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
         return String.valueOf(round(100.0 * amountOfParacetamol / dosageinMl) / 100.0);
     }
+
 }
