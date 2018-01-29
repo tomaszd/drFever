@@ -13,6 +13,8 @@ import static java.lang.Math.round;
 
 public class SirupDosageActivity extends AppCompatActivity {
 
+    private double amountOfParacetamolMax1 = 1.0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +86,14 @@ public class SirupDosageActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent myIntent = new Intent(SirupDosageActivity.this, DosageDetails.class);
+        myIntent.putExtra("amountOfParacetamolMax", amountOfParacetamolMax1);
+        startActivity(myIntent);
+    }
+
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
         return "        " + String.valueOf(round(100.0 * amountOfParacetamol * 5 / dosageinMl) / 100.0) + " ml";
