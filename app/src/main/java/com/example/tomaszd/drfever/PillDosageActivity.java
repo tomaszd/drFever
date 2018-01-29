@@ -13,8 +13,6 @@ import static java.lang.Math.round;
 
 public class PillDosageActivity extends AppCompatActivity {
 
-    private double amountOfParacetamolMax1 = 1.0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +25,6 @@ public class PillDosageActivity extends AppCompatActivity {
         Intent myIntent = getIntent();
         //final Double amountOfParacetamolMin = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
-        amountOfParacetamolMax1 = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
         buttonParacetamolDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfParacetamolMax) + " mg"));
         buttonParacetamolDosagePillAmount.setText("Tabletka");
 
@@ -84,12 +81,6 @@ public class PillDosageActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent myIntent = new Intent(PillDosageActivity.this, DosageDetails.class);
-        myIntent.putExtra("amountOfParacetamolMax", amountOfParacetamolMax1);
-        startActivity(myIntent);
-    }
 
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {

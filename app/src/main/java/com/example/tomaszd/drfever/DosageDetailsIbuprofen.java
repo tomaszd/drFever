@@ -17,6 +17,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         //final EditText editMinIbuprofen = (EditText) findViewById(R.id.editMinIbuprofen);
         //final TextView txtIbuprofenDetails = (TextView) findViewById(R.id.txtIbuprofenDetails);
         Intent myIntent = getIntent();
+
         final String ibuprofenDetails = myIntent.getStringExtra("ibuprofenDetails");
         final Double amountOfIbuprofenMin = myIntent.getDoubleExtra("amountOfIbuprofenMin", 0.0);
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);

@@ -13,7 +13,6 @@ import static java.lang.Math.round;
 
 public class CzopekActivity extends AppCompatActivity {
 
-    private double amountOfParacetamolMax1 = 1.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,6 @@ public class CzopekActivity extends AppCompatActivity {
         Intent myIntent = getIntent();
         //final Double amountOfParacetamolMin = myIntent.getDoubleExtra("amountOfParacetamolMin", 0.0);
         final Double amountOfParacetamolMax = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
-        amountOfParacetamolMax1 = myIntent.getDoubleExtra("amountOfParacetamolMax", 0.0);
         buttonParacetamolDosageAmount.setText(String.valueOf("        " + String.valueOf(amountOfParacetamolMax) + " mg"));
         buttonParacetamolDosageCzopekAmount.setText("         Wybierz czopek");
 
@@ -126,12 +124,7 @@ public class CzopekActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent myIntent = new Intent(CzopekActivity.this, DosageDetails.class);
-        myIntent.putExtra("amountOfParacetamolMax", amountOfParacetamolMax1);
-        startActivity(myIntent);
-    }
+
 
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
