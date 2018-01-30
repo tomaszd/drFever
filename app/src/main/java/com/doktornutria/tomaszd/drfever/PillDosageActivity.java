@@ -35,6 +35,11 @@ public class PillDosageActivity extends AppCompatActivity {
         final Button button_pill_parac_250 = (Button) findViewById(R.id.button_pill_parac_250);
 
 
+        button_pill_parac_1000.setAnimation(shakeButtonAnimation);
+        button_pill_parac_500.setAnimation(shakeButtonAnimation);
+        button_pill_parac_300.setAnimation(shakeButtonAnimation);
+        button_pill_parac_250.setAnimation(shakeButtonAnimation);
+
         button_pill_parac_1000.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

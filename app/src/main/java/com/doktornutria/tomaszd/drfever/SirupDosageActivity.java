@@ -35,6 +35,10 @@ public class SirupDosageActivity extends AppCompatActivity {
         final Button buttonsirup_parac_200_5 = (Button) findViewById(R.id.buttonsirup_parac_200_5);
         final Button buttonsirup_parac_120_5 = (Button) findViewById(R.id.buttonsirup_parac_120_5);
 
+        buttonsirup_parac_500_5.setAnimation(shakeButtonAnimation);
+        buttonsirup_parac_250_5.setAnimation(shakeButtonAnimation);
+        buttonsirup_parac_200_5.setAnimation(shakeButtonAnimation);
+        buttonsirup_parac_120_5.setAnimation(shakeButtonAnimation);
 
         buttonsirup_parac_500_5.setOnClickListener(new View.OnClickListener() {
             @Override

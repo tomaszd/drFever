@@ -31,6 +31,11 @@ public class PillDosageIbuprofenActivity extends AppCompatActivity {
 
         final Button buttonPillIbuprofen200Forte = (Button) findViewById(R.id.buttonPillIbuprofen200Forte);
         final Button buttonPillIbuprofen400Max = (Button) findViewById(R.id.buttonPillIbuprofen400Max);
+
+
+        buttonPillIbuprofen200Forte.setAnimation(shakeButtonAnimation);
+        buttonPillIbuprofen400Max.setAnimation(shakeButtonAnimation);
+
         buttonPillIbuprofen200Forte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

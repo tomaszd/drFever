@@ -31,6 +31,11 @@ public class SirupDosageIbuprofenActivity extends AppCompatActivity {
 
         final Button buttonsirup_ibuprof_100_5 = (Button) findViewById(R.id.buttonsirup_ibuprof_100_5);
         final Button buttonsirup_ibuprof_200_5 = (Button) findViewById(R.id.buttonsirup_ibuprof_200_5);
+
+
+        buttonsirup_ibuprof_100_5.setAnimation(shakeButtonAnimation);
+        buttonsirup_ibuprof_200_5.setAnimation(shakeButtonAnimation);
+
         buttonsirup_ibuprof_100_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

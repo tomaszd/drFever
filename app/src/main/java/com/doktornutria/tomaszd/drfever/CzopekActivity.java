@@ -38,6 +38,15 @@ public class CzopekActivity extends AppCompatActivity {
         final Button button_Czopek_parac_80 = (Button) findViewById(R.id.button_Czopek_parac_80);
         final Button button_Czopek_parac_50 = (Button) findViewById(R.id.button_Czopek_parac_50);
 
+        button_Czopek_parac_500.setAnimation(shakeButtonAnimation);
+        button_Czopek_parac_300.setAnimation(shakeButtonAnimation);
+        button_Czopek_parac_250.setAnimation(shakeButtonAnimation);
+        button_Czopek_parac_180.setAnimation(shakeButtonAnimation);
+        button_Czopek_parac_150.setAnimation(shakeButtonAnimation);
+        button_Czopek_parac_125.setAnimation(shakeButtonAnimation);
+        button_Czopek_parac_80.setAnimation(shakeButtonAnimation);
+        button_Czopek_parac_50.setAnimation(shakeButtonAnimation);
+
 
         button_Czopek_parac_500.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,7 +132,6 @@ public class CzopekActivity extends AppCompatActivity {
 
 
     }
-
 
 
     @NonNull

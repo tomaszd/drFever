@@ -32,6 +32,9 @@ public class CzopekIbuprofenActivity extends AppCompatActivity {
         final Button buttonCzopekIbuprofen60 = (Button) findViewById(R.id.buttonCzopekIbuprofen60);
         final Button buttonCzopekIbuprofenCzopek125 = (Button) findViewById(R.id.buttonCzopekIbuprofenCzopek125);
 
+        buttonCzopekIbuprofen60.setAnimation(shakeButtonAnimation);
+        buttonCzopekIbuprofenCzopek125.setAnimation(shakeButtonAnimation);
+
         buttonCzopekIbuprofen60.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
