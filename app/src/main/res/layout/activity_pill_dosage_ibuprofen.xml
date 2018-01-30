@@ -57,6 +57,7 @@
             android:background="@drawable/ibuprof_400" />
 
     </LinearLayout>
+
     <Space
         android:layout_width="1dp"
         android:layout_height="30dp"/>
