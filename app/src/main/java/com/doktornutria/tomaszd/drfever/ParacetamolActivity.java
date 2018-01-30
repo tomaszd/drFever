@@ -101,7 +101,7 @@ public class ParacetamolActivity extends AppCompatActivity {
                 buttonCountParacetamol.setAnimation(shakeButtonAnimation);
                 String amountParacetamol7_12 = getResources().getString(R.string.amountParacetamol7_12);
                 String amountParacetamolAdult = getResources().getString(R.string.amountParacetamolAdult);
-                if (actualWeight == 0 || actualAge == 0) {
+                if (actualWeight == 0) {
                     Toast.makeText(ParacetamolActivity.this, R.string.value_greater_than_0,
                             Toast.LENGTH_LONG).show();
                     return;
