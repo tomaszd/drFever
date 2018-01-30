@@ -61,6 +61,6 @@ public class CzopekIbuprofenActivity extends AppCompatActivity {
 
     @NonNull
     private String getDosageAmount(Double amountOfIbuprofen, int dosageinMl) {
-        return "          " + String.valueOf(round((dosageinMl / amountOfIbuprofen) * 100) / 1.0) + " % dawki";
+        return "          " + String.valueOf(round((dosageinMl / amountOfIbuprofen) * 100) / 1.0) + "% dawki";
     }
 }
