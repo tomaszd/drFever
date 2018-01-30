@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DrFever</string>
+    <string name="app_name">Dr Fever</string>
     <string name="title_home">Home Temperature</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -22,5 +22,7 @@
     <string name="max_daily_dosage_ibuprofen">*Max dawka dobowa 1600 mg</string>
     <string name="max_daily_dosage_paracetamol">*Max dawka dobowa 4000 mg</string>
     <string name="value_greater_than_0">Wybierz wage</string>
+    <string name="paracetamol_max_dawka_dobowa_4000_mg">*Paracetamol max dawka dobowa 4000 mg</string>
+    <string name="dla_osoby_doroslej_nalezy_ustawic_suwaki_n_maksymalnie_w_prawo_czyli_18_lat_i_60_kg">*dla osoby doroslej nalezy ustawic suwaki :  maksymalnie w prawo czyli 18 lat i 60 kg</string>
 
 </resources>

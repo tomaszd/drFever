@@ -7,57 +7,10 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textViewAgeOfChildParacetamol"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="2"
-            android:background="@drawable/button_wiek_ribeye"
-            android:fontFamily="cursive"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-            android:textColor="@android:color/background_light"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textViewAgeParacetamol"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:fontFamily="cursive"
-            android:text="@string/age"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-            android:textColor="@android:color/black"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <SeekBar
-        android:id="@+id/seekBarAge"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-
-        android:max="20"
-        android:progress="4"
-        android:progressDrawable="@drawable/custom_progress"
-        android:thumb="@drawable/slider" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-
         android:orientation="horizontal">
 
         <TextView
@@ -96,11 +49,56 @@
         android:layout_above="@+id/textViewAgeParacetamol"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"
-        android:max="20"
-        android:progress="4"
+        android:max="60"
+        android:progress="20"
         android:progressDrawable="@drawable/custom_progress"
         android:thumb="@drawable/slider"
         android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewAgeOfChildParacetamol"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:background="@drawable/button_wiek_ribeye"
+            android:fontFamily="cursive"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/background_light"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewAgeParacetamol"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:fontFamily="cursive"
+            android:text="@string/age"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarAge"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:max="18"
+        android:progress="4"
+        android:progressDrawable="@drawable/custom_progress"
+        android:thumb="@drawable/slider" />
 
     <TextView
         android:id="@+id/textView"
@@ -109,7 +107,7 @@
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:fontFamily="casual"
-        android:text="*Paracetamol moze miec rozne nazwy :\nApap, Panadol, Calpol, Eferalgan"
+        android:text="@string/dla_osoby_doroslej_nalezy_ustawic_suwaki_n_maksymalnie_w_prawo_czyli_18_lat_i_60_kg"
         android:textAlignment="gravity"
         android:textColor="@android:color/black"
         android:textSize="15sp"
@@ -117,8 +115,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -142,10 +140,11 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="*Paracetamol max dawka dzienna 4000 mg"
+        android:fontFamily="casual"
+        android:text="*Preparaty handlowe:\n Apap, Calpol, Efferalgan, Panadol"
         android:textAlignment="gravity"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        android:textStyle="italic" />
+        android:textStyle="bold|italic" />
 </LinearLayout>
 
