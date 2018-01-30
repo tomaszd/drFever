@@ -12,7 +12,7 @@
     <Button
         android:id="@+id/buttonParacetamolDosageAmount"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_margin="0dp"
         android:layout_weight="1"
         android:background="@drawable/wst_parac_tabl"
@@ -26,7 +26,7 @@
         android:textStyle="bold|italic" />
     <Space
         android:layout_width="1dp"
-        android:layout_height="25dp"/>
+        android:layout_height="20dp"/>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="110dp"
@@ -37,8 +37,8 @@
             android:id="@+id/button_pill_parac_1000"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:layout_weight="1"
             android:background="@drawable/parac_1000" />
 
@@ -46,8 +46,8 @@
             android:id="@+id/button_pill_parac_500"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:layout_weight="1"
             android:background="@drawable/parac_500" />
 
@@ -63,8 +63,8 @@
             android:id="@+id/button_pill_parac_300"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:layout_weight="1"
             android:background="@drawable/parac_300" />
 
@@ -72,19 +72,19 @@
             android:id="@+id/button_pill_parac_250"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:layout_weight="1"
             android:background="@drawable/parac_250" />
 
     </LinearLayout>
     <Space
         android:layout_width="1dp"
-        android:layout_height="25dp"/>
+        android:layout_height="20dp"/>
     <Button
         android:id="@+id/buttonParacetamolDosagepillAmount"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_margin="0dp"
         android:layout_weight="1"
         android:background="@drawable/button_paracetamol_bez"
@@ -110,6 +110,6 @@
         android:textStyle="bold|italic" />
     <Space
         android:layout_width="1dp"
-        android:layout_height="25dp"/>
+        android:layout_height="5dp"/>
 
 </LinearLayout>

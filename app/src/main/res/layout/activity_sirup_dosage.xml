@@ -24,7 +24,9 @@
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
-
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="20dp"/>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="110dp"
@@ -35,8 +37,8 @@
             android:id="@+id/buttonsirup_parac_500_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
             android:layout_weight="1"
             android:background="@drawable/sirup_parac_500_5" />
 
@@ -45,8 +47,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
             android:background="@drawable/sirup_parac_250_5" />
 
     </LinearLayout>
@@ -63,8 +65,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
             android:background="@drawable/sirup_parac_200_5" />
 
         <Button
@@ -72,12 +74,14 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
             android:background="@drawable/sirup_parac_120_5" />
 
     </LinearLayout>
-
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="20dp"/>
     <Button
         android:id="@+id/buttonParacetamolDosageSirupAmount"
         android:layout_width="match_parent"
@@ -93,6 +97,7 @@
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
+
     <TextView
         android:id="@+id/wyliczona_dawka_ibuprofen"
         android:layout_width="match_parent"
@@ -105,19 +110,11 @@
         android:textColor="@android:color/black"
         android:textSize="15sp"
         android:textStyle="bold|italic" />
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-
-        android:orientation="vertical">
-
-    </LinearLayout>
 
 
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="0dp"/>
 
 
 </LinearLayout>

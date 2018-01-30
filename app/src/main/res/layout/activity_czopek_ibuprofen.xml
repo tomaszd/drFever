@@ -37,10 +37,11 @@
 
     <Space
         android:layout_width="1dp"
-        android:layout_height="30dp"/>
+        android:layout_height="10dp"/>
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="120dp"
+        android:layout_height="150dp"
         android:layout_margin="0dp"
         android:orientation="horizontal">
 
@@ -63,9 +64,10 @@
             android:background="@drawable/ibuprof_125" />
 
     </LinearLayout>
+
     <Space
         android:layout_width="1dp"
-        android:layout_height="30dp"/>
+        android:layout_height="10dp"/>
     <Button
         android:id="@+id/buttonIbuprofenDosageCzopekAmount"
         android:layout_width="match_parent"

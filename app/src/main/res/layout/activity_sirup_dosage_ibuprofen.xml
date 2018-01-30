@@ -24,7 +24,9 @@
         android:textColor="@android:color/background_light"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
-
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="30dp"/>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="130dp"
@@ -49,7 +51,9 @@
             android:background="@drawable/sirup_ibuprof_200_5" />
 
     </LinearLayout>
-
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="50dp"/>
     <Button
         android:id="@+id/buttonIbuprofenDosageSirupAmount"
         android:layout_width="match_parent"
@@ -66,17 +70,9 @@
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-
-        android:orientation="vertical">
-
-    </LinearLayout>
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="60dp"/>
 
 
 </LinearLayout>
