@@ -6,13 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 public class SelectDrugActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select_drug);
+
+        final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
         Button buttonIbuprofen = (Button) findViewById(R.id.buttonIbuprofen);
         buttonIbuprofen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +37,8 @@ public class SelectDrugActivity extends AppCompatActivity {
                 SelectDrugActivity.this.startActivity(myIntent);
             }
         });
-
+        buttonIbuprofen.setAnimation(shakeButtonAnimation);
+        buttonParacetamol.setAnimation(shakeButtonAnimation);
 
     }
 }
