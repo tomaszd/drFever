@@ -108,7 +108,7 @@
         android:background="@drawable/button_paracetamol_bez"
         android:elevation="0dp"
         android:fontFamily="cursive"
-        android:text="          Wybierz Czopek"
+        android:text="          Wybierz dawke"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
