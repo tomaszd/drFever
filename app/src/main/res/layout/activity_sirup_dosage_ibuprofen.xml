@@ -37,8 +37,8 @@
             android:id="@+id/buttonsirup_ibuprof_100_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:background="@drawable/sirup_ibuprof_100_5" />
 
@@ -46,7 +46,8 @@
             android:id="@+id/buttonsirup_ibuprof_200_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:background="@drawable/sirup_ibuprof_200_5" />
 
