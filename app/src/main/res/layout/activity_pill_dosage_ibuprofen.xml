@@ -27,18 +27,14 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:orientation="horizontal">
-
-    </LinearLayout>
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="30dp"/>
 
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="130dp"
+        android:layout_height="120dp"
         android:layout_margin="0dp"
         android:orientation="horizontal">
 
@@ -46,21 +42,24 @@
             android:id="@+id/buttonPillIbuprofen200Forte"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_weight="1"
-            android:background="@drawable/dawka_pill_ibu_200g" />
+            android:background="@drawable/ibuprof_200" />
 
         <Button
             android:id="@+id/buttonPillIbuprofen400Max"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_weight="1"
-            android:background="@drawable/dawka_pill_ibu_400g" />
+            android:background="@drawable/ibuprof_400" />
 
     </LinearLayout>
-
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="30dp"/>
     <Button
         android:id="@+id/buttonIbuprofenDosagePillAmount"
         android:layout_width="match_parent"
@@ -74,8 +73,9 @@
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold|italic" />
+
     <TextView
         android:id="@+id/wyliczona_dawka_ibuprofen"
         android:layout_width="match_parent"
@@ -88,15 +88,9 @@
         android:textColor="@android:color/black"
         android:textSize="15sp"
         android:textStyle="bold|italic" />
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
-    </LinearLayout>
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="60dp"/>
 
 
 </LinearLayout>
