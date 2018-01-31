@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class DosageDetails extends AppCompatActivity {
 
@@ -46,6 +47,10 @@ public class DosageDetails extends AppCompatActivity {
         //editMinParacetamol.setText(String.valueOf(amountOfParacetamolMin));
         //editMaxParacetamol.setText(String.valueOf(amountOfParacetamolMax));
         buttonParacetamolDosageAmount.setText("  " + String.valueOf(amountOfParacetamolMax) + " mg");
+
+        final TextView txtMaxDawka = (TextView) findViewById(R.id.txtMaxDawka);
+        txtMaxDawka.setText("MAXYMALNA DAWKA DOBOWA " + String.valueOf(4 * amountOfParacetamolMax) + " mg");
+
 
         //Pills
         Button buttonPill = (Button) findViewById(R.id.buttonPillParacetamol);

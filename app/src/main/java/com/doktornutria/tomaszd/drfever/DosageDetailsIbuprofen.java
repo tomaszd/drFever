@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class DosageDetailsIbuprofen extends AppCompatActivity {
 
@@ -23,6 +24,10 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         final Double amountOfIbuprofenMax = myIntent.getDoubleExtra("amountOfIbuprofenMax", 0.0);
         final Button buttonIbuprofenDosageAmount = (Button) findViewById(R.id.buttonIbuprofenDosageAmount);
         buttonIbuprofenDosageAmount.setText(" " + String.valueOf(amountOfIbuprofenMax) + " mg");
+
+        final TextView txtMaxDawka = (TextView) findViewById(R.id.txtMaxDawka);
+        txtMaxDawka.setText("MAXYMALNA DAWKA DOBOWA " + String.valueOf(4 * amountOfIbuprofenMax) + " mg");
+
         //editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMax));
         //editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMin));
         //txtIbuprofenDetails.setText(ibuprofenDetails);
