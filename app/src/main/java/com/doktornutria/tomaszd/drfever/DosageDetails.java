@@ -49,7 +49,7 @@ public class DosageDetails extends AppCompatActivity {
         buttonParacetamolDosageAmount.setText("  " + String.valueOf(amountOfParacetamolMax) + " mg");
 
         final TextView txtMaxDawka = (TextView) findViewById(R.id.txtMaxDawka);
-        txtMaxDawka.setText("MAKSYMALNA DAWKA DOBOWA " + String.valueOf(4 * amountOfParacetamolMax) + " mg");
+        txtMaxDawka.setText("Maksymalna dawka dobowa " + String.valueOf(4 * amountOfParacetamolMax) + " mg");
 
 
         //Pills

@@ -26,7 +26,7 @@ public class DosageDetailsIbuprofen extends AppCompatActivity {
         buttonIbuprofenDosageAmount.setText(" " + String.valueOf(amountOfIbuprofenMax) + " mg");
 
         final TextView txtMaxDawka = (TextView) findViewById(R.id.txtMaxDawka);
-        txtMaxDawka.setText("MAKSYMALNA DAWKA DOBOWA " + String.valueOf(3 * amountOfIbuprofenMax) + " mg");
+        txtMaxDawka.setText("Maksymalna dawka dobowa " + String.valueOf(3 * amountOfIbuprofenMax) + " mg");
 
         //editMaxIbuprofen.setText(String.valueOf(amountOfIbuprofenMax));
         //editMinIbuprofen.setText(String.valueOf(amountOfIbuprofenMin));
