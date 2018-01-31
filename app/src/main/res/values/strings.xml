@@ -22,11 +22,11 @@
     <string name="max_daily_dosage_ibuprofen">*Max dawka dobowa 1600 mg</string>
     <string name="max_daily_dosage_paracetamol">*Max dawka dobowa 4000 mg</string>
     <string name="value_greater_than_0">Wybierz wage</string>
-    <string name="paracetamol_max_dawka_dobowa_4000_mg">MAKSYMALNA DAWKA DOBOWA 4000 mg</string>
-    <string name="ibuprofen_max_dawka_dobowa">MAKSYMALNA DAWKA DOBOWA 1600 mg</string>
+    <string name="paracetamol_max_dawka_dobowa_4000_mg">Maksymalna dawka dobowa 4000 mg</string>
+    <string name="ibuprofen_max_dawka_dobowa">Maksymalna dawka dobowa 1600 mg</string>
     <string name="dla_osoby_doroslej_nalezy_ustawic_suwaki_n_maksymalnie_w_prawo_czyli_18_lat_i_60_kg">* Dorosly: suwak ustawic maksymalnie w prawo czyli 18 lat i 60 kg</string>
 
-    <string name="wyliczona_dawka_ibuprofen">DAWKA MOZE BYC PODANA CO 8 GODZIN</string>
-    <string name="wyliczona_dawka_paracetamol">DAWKA MOZE BYC PODANA CO 6 GODZIN</string>
+    <string name="wyliczona_dawka_ibuprofen">Dawke wyliczona mozna podac co 8 godzin</string>
+    <string name="wyliczona_dawka_paracetamol">Dawke wyliczona mozna podac co 6 godzin</string>
 
 </resources>

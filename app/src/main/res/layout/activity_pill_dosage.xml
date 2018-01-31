@@ -105,11 +105,9 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:fontFamily="casual"
         android:text="@string/wyliczona_dawka_paracetamol"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
+        android:fontFamily="casual"
         android:textStyle="bold|italic" />
     <Space
         android:layout_width="1dp"

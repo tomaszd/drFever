@@ -96,11 +96,11 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:fontFamily="casual"
         android:text="@string/paracetamol_max_dawka_dobowa_4000_mg"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
+        android:textColor="@color/colorTextBottom"
+        android:fontFamily="cursive"
+        android:textSize="17sp"
         android:textStyle="bold|italic" />
 </LinearLayout>
 
