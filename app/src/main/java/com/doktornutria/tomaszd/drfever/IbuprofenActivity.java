@@ -11,6 +11,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static java.lang.Math.min;
+
 public class IbuprofenActivity extends AppCompatActivity {
     private int actualAge = 0;
     private int actualWeight = 0;
@@ -119,7 +121,7 @@ public class IbuprofenActivity extends AppCompatActivity {
 
 
                 //TODO wiser algorithm
-                amountOfIbuprofenMax = actualWeight * 10;
+                amountOfIbuprofenMax = min(actualWeight * 10, 400);
 
 
                 //view.startAnimation(shakeButtonAnimation);

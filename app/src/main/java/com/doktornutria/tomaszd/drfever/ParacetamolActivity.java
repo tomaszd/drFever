@@ -11,6 +11,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static java.lang.Math.min;
+
 public class ParacetamolActivity extends AppCompatActivity {
     private int actualAge = 0;
     private int actualWeight = 0;
@@ -130,8 +132,7 @@ public class ParacetamolActivity extends AppCompatActivity {
 
                 //TODO wiser algorithm
 
-                amountOfParacetamolMax = actualWeight * 15;
-
+                amountOfParacetamolMax = min(actualWeight * 15, 600);
 
                 //textCounted.setText(amountOfDrugs);
                 //view.startAnimation(shakeButtonAnimation);
