@@ -98,7 +98,7 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="casual"
         android:text="@string/paracetamol_max_dawka_dobowa_4000_mg"
-        android:textAlignment="gravity"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="15sp"
         android:textStyle="bold|italic" />

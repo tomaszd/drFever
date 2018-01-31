@@ -78,6 +78,7 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/txtMaxDawka"
         android:layout_width="match_parent"
@@ -86,11 +87,10 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="casual"
         android:text="@string/ibuprofen_max_dawka_dobowa"
-        android:textAlignment="gravity"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="15sp"
         android:textStyle="bold|italic" />
-
 
 
 </LinearLayout>

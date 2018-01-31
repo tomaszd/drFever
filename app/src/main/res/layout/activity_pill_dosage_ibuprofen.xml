@@ -76,7 +76,9 @@
         android:textColor="@android:color/background_light"
         android:textSize="27sp"
         android:textStyle="bold|italic" />
-
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="30dp"/>
     <TextView
         android:id="@+id/wyliczona_dawka_ibuprofen"
         android:layout_width="match_parent"
@@ -85,13 +87,13 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="casual"
         android:text="@string/wyliczona_dawka_ibuprofen"
-        android:textAlignment="gravity"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="15sp"
         android:textStyle="bold|italic" />
     <Space
         android:layout_width="1dp"
-        android:layout_height="60dp"/>
+        android:layout_height="30dp"/>
 
 
 </LinearLayout>

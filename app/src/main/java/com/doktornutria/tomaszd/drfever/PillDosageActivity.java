@@ -90,6 +90,6 @@ public class PillDosageActivity extends AppCompatActivity {
 
     @NonNull
     private String getDosageAmount(Double amountOfParacetamol, int dosageinMl) {
-        return String.valueOf(round(10.0 * amountOfParacetamol / dosageinMl) / 10.0) + "tabl";
+        return String.valueOf(round(10.0 * amountOfParacetamol / dosageinMl) / 10.0) + " tabletki";
     }
 }
