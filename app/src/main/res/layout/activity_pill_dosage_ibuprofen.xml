@@ -74,7 +74,7 @@
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
-        android:textSize="27sp"
+        android:textSize="25sp"
         android:textStyle="bold|italic" />
     <Space
         android:layout_width="1dp"
