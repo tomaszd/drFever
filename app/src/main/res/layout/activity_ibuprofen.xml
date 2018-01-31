@@ -99,19 +99,6 @@
         android:progressDrawable="@drawable/custom_progress_ibuprofen"
         android:thumb="@drawable/slider" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="casual"
-        android:text="@string/dla_osoby_doroslej_nalezy_ustawic_suwaki_n_maksymalnie_w_prawo_czyli_18_lat_i_60_kg"
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold|italic" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="200dp"
@@ -133,17 +120,5 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="casual"
-        android:text="*Ibuprofen moze miec rozne nazwy n.p.: \nNurofen, Ibum, Ibuprom, Brufen, Mig"
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        android:textStyle="bold|italic" />
 </LinearLayout>
 
