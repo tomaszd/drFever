@@ -44,7 +44,8 @@
             android:id="@+id/buttonParacetamol"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@drawable/button_paracetamol"
             android:elevation="0dp"
@@ -53,11 +54,13 @@
         <Space
             android:layout_width="1dp"
             android:layout_height="40dp"/>
+
         <Button
             android:id="@+id/buttonIbuprofen"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:layout_weight="1"
             android:background="@drawable/button_ibuprofen" />
     </LinearLayout>
