@@ -78,7 +78,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
     </LinearLayout>
     <TextView
-        android:id="@+id/wyliczona_dawka_ibuprofen"
+        android:id="@+id/txtMaxDawka"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
