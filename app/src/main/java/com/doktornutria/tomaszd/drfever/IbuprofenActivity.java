@@ -1,6 +1,8 @@
 package com.doktornutria.tomaszd.drfever;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -30,6 +32,17 @@ public class IbuprofenActivity extends AppCompatActivity {
         final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeIbupremValue);
         final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
         final Button buttonCountIbuprem = (Button) findViewById(R.id.buttonCountIbuprofen);
+        final SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeightIbuprofen);
+        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeightInKgIbuprofenValue);
+
+
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        actualAge = sharedPref.getInt("ibuprofenAge", 8);
+        actualWeight = sharedPref.getInt("ibuprofenWeight", 20);
+        seekBarAge.setProgress(actualAge);
+        seekBarWeight.setProgress(actualWeight);
+        seekBarValue.setText(String.valueOf(actualAge) + " lat");
+        seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
 
 
         seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -54,8 +67,6 @@ public class IbuprofenActivity extends AppCompatActivity {
             }
         });
 
-        final SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeightIbuprofen);
-        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeightInKgIbuprofenValue);
 
         seekBarWeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -136,6 +147,13 @@ public class IbuprofenActivity extends AppCompatActivity {
                 //10mg/kg
                 amountOfIbuprofenMax = min(actualWeight * 10, maxDawkaIbuprofen);
 
+
+                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putInt("ibuprofenAge", actualAge);
+                editor.commit();
+                editor.putInt("ibuprofenWeight", actualWeight);
+                editor.commit();
 
                 //view.startAnimation(shakeButtonAnimation);
                 Intent myIntent = new Intent(IbuprofenActivity.this, DosageDetailsIbuprofen.class);

@@ -1,6 +1,8 @@
 package com.doktornutria.tomaszd.drfever;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -31,6 +33,18 @@ public class ParacetamolActivity extends AppCompatActivity {
         final TextView seekBarValue = (TextView) findViewById(R.id.textViewAgeParacetamol);
         final Animation shakeButtonAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
         final Button buttonCountParacetamol = (Button) findViewById(R.id.buttonCount);
+        final SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeight);
+        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeightParacetamol);
+
+
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        actualAge = sharedPref.getInt("paracetamolAge", 8);
+        actualWeight = sharedPref.getInt("paracetamolWeight", 20);
+
+        seekBarAge.setProgress(actualAge);
+        seekBarWeight.setProgress(actualWeight);
+        seekBarValue.setText(String.valueOf(actualAge) + " lat");
+        seekBarWeightValue.setText(String.valueOf(actualWeight + " kg"));
 
 
         seekBarAge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -54,9 +68,6 @@ public class ParacetamolActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
-
-        final SeekBar seekBarWeight = (SeekBar) findViewById(R.id.seekBarWeight);
-        final TextView seekBarWeightValue = (TextView) findViewById(R.id.textViewWeightParacetamol);
 
         seekBarWeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -141,6 +152,13 @@ public class ParacetamolActivity extends AppCompatActivity {
 
                 //textCounted.setText(amountOfDrugs);
                 //view.startAnimation(shakeButtonAnimation);
+                SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putInt("paracetamolAge", actualAge);
+                editor.commit();
+                editor.putInt("paracetamolWeight", actualWeight);
+                editor.commit();
+
                 Intent myIntent = new Intent(ParacetamolActivity.this, DosageDetails.class);
                 myIntent.putExtra("paracetamolAmount", amountOfDrugs);
                 myIntent.putExtra("amountOfParacetamolMin", amountOfParacetamolMin);
