@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="Dawke wyliczona mozna podawac co 6 godzin"
+        android:text="@string/wyliczona_dawka_ibuprofen"
         android:textAlignment="center"
         android:textColor="@color/colorTextBottom"
         android:fontFamily="cursive"

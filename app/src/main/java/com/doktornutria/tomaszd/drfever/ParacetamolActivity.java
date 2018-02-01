@@ -131,8 +131,13 @@ public class ParacetamolActivity extends AppCompatActivity {
 
 
                 //TODO wiser algorithm
+                int maxDawkaParacetamol;
+                if (actualAge <= 12 || actualWeight < 40) {
+                    maxDawkaParacetamol = 500;
+                } else
+                    maxDawkaParacetamol = 1000;
 
-                amountOfParacetamolMax = min(actualWeight * 15, 600);
+                amountOfParacetamolMax = min(actualWeight * 15, maxDawkaParacetamol);
 
                 //textCounted.setText(amountOfDrugs);
                 //view.startAnimation(shakeButtonAnimation);

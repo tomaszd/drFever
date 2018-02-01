@@ -121,7 +121,20 @@ public class IbuprofenActivity extends AppCompatActivity {
 
 
                 //TODO wiser algorithm
-                amountOfIbuprofenMax = min(actualWeight * 10, 400);
+
+                int maxDawkaIbuprofen = 400;
+                if (actualAge < 10 || actualWeight < 30) {
+                    maxDawkaIbuprofen = 200;
+                }
+
+                if ((10 <= actualAge && actualAge <= 12) || (30 <= actualWeight && actualWeight <= 39)) {
+                    maxDawkaIbuprofen = 270;
+                }
+                if (actualAge > 12 || actualWeight > 39) {
+                    maxDawkaIbuprofen = 400;
+                }
+                //10mg/kg
+                amountOfIbuprofenMax = min(actualWeight * 10, maxDawkaIbuprofen);
 
 
                 //view.startAnimation(shakeButtonAnimation);
