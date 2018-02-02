@@ -25,10 +25,21 @@
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
-
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.25"
+        android:fontFamily="cursive"
+        android:text="@string/dawka_jednorazowa"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextBottom"
+        android:textSize="23sp"
+        android:textStyle="bold|italic" />
     <Space
         android:layout_width="1dp"
-        android:layout_height="30dp"/>
+        android:layout_height="2dp"/>
 
 
     <LinearLayout
@@ -59,7 +70,7 @@
 
     <Space
         android:layout_width="1dp"
-        android:layout_height="30dp"/>
+        android:layout_height="10dp"/>
     <Button
         android:id="@+id/buttonIbuprofenDosagePillAmount"
         android:layout_width="match_parent"
@@ -74,7 +85,7 @@
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:textStyle="bold|italic" />
     <Space
         android:layout_width="1dp"
