@@ -14,6 +14,6 @@ Few different medicaments should be possible to be selected e.g.:
 1. Klacid
 1. Paracetamol
 1. ...etc 
+### successful release in google store
 
-
-
+https://play.google.com/store/apps/details?id=com.doktornutria.tomaszd.doktornutria&hl=pl
